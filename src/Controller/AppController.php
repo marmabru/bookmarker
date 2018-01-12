@@ -29,6 +29,11 @@ class AppController extends Controller
 {
 
     /**
+    * Include NavHelper
+    **/
+    public $helpers = array('Nav');
+
+    /**
      * Initialization hook method.
      *
      * Use this method to add common initialization code like loading components.
