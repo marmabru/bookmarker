@@ -24,15 +24,15 @@ use Cake\View\Helper;
 		public function main() {
 
       $content = '        <!-- Menu -->
-                <div class="w3-bar w3-red">
-                <a href="#" class="w3-bar-item w3-button w3-orange">ActorDB</a>' .
+                <div class="w3-bar w3-theme-l2">
+                <a href="#" class="w3-bar-item w3-button w3-theme-d2">ActorDB</a>' .
                 $this->Html->link(__('Add Bookmarks'), ['controller' => 'Bookmarks', 'action' => 'add'], ['class' => 'w3-bar-item w3-button w3-hide-small']) .
                 $this->Html->link(__('List Bookmarks'), ['controller' => 'Bookmarks', 'action' => 'index'], ['class' => 'w3-bar-item w3-button w3-hide-small']) .
                 $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index'], ['class' => 'w3-bar-item w3-button w3-hide-small']) . '
                 <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="toggleMenu()">&#9776;</a>
               </div>
 
-              <div id="mainmenu" class="w3-bar-block w3-red w3-hide w3-hide-large w3-hide-medium">' .
+              <div id="mainmenu" class="w3-bar-block w3-theme-l2 w3-hide w3-hide-large w3-hide-medium">' .
               $this->Html->link(__('Add Bookmarks'), ['controller' => 'Bookmarks', 'action' => 'add'], ['class' => 'w3-bar-item w3-button']) .
               $this->Html->link(__('List Bookmarks'), ['controller' => 'Bookmarks', 'action' => 'index'], ['class' => 'w3-bar-item w3-button']) .
               $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index'], ['class' => 'w3-bar-item w3-button']) . '

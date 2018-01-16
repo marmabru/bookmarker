@@ -27,10 +27,11 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </title>
     <?= $this->Html->meta('icon') ?>
 
-    <?= $this->Html->css('base.css') ?>
-    <?= $this->Html->css('cake.css') ?>
+    <!-- <?= $this->Html->css('base.css') ?> -->
+    <!-- <?= $this->Html->css('cake.css') ?> -->
     <?= $this->Html->css('app.css') ?>
     <?= $this->Html->css('w3.css') ?>
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
@@ -38,11 +39,11 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 </head>
 <body>
     <?= $this->Flash->render() ?>
-    <div class="w3-content w3-white" style="max-width:960px">
-      <div class="w3-row">
-        <div class="w3-quarter w3-container w3-green">
+    <div class="w3-content w3-theme-l5" style="max-width:960px">
+      <div class="w3-row w3-hide-small">
+        <div class="w3-quarter w3-container">
         </div>
-        <div class="w3-half w3-container">
+        <div class="w3-half w3-container w3-margin">
           <?= $this->Html->image('header-pic-wide1.jpg', ['alt' => 'Header-Pic', 'class' => 'w3-circle w3-image']); ?>
         </div>
         <div class="w3-quarter w3-container">

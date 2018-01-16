@@ -16,20 +16,26 @@
     </ul>
 </nav> -->
 
-<div class="container side-collapse-container">
-<div class="bookmarks form large-9 medium-8 columns content">
-    <?= $this->Form->create($bookmark) ?>
-    <fieldset>
-        <legend><?= __('Add Bookmark') ?></legend>
-        <?php
-            echo $this->Form->control('user_id', ['options' => $users]);
-            echo $this->Form->control('title');
-            echo $this->Form->control('description');
-            echo $this->Form->control('url');
-            echo $this->Form->control('tags._ids', ['options' => $tags]);
-        ?>
-    </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+<div class="w3-container">
+  <div class="w3-card-4 w3-margin-top w3-theme-d5">
+    <div class="w3-container">
+        <h4><?= __('New Bookmark') ?></h4>
+    </div>
+
+    <?= $this->Form->create($bookmark, ['class' => 'w3-container w3-card-4 w3-theme-l3']) . PHP_EOL ?>
+
+    <?php
+        echo $this->Form->control('user_id', ['options' => $users, 'class' => 'w3-input w3-border']) . PHP_EOL;
+        echo $this->Form->control('title', ['class' => 'w3-input w3-border']) . PHP_EOL;
+        echo $this->Form->control('description', ['class' => 'w3-input w3-border']) . PHP_EOL;
+        echo $this->Form->control('url', ['class' => 'w3-input w3-border']) . PHP_EOL;
+        echo $this->Form->control('tags._ids', ['options' => $tags, 'class' => 'w3-input w3-border']) . PHP_EOL;
+    ?>
+    <p>
+    <p>
+    <?= $this->Form->button(__('Submit'), ['class' => 'w3-button w3-border w3-theme-l1 w3-round-xlarge w3-ripple w3-padding-small w3-right']) ?>
+    <p>
     <?= $this->Form->end() ?>
-</div>
+    </form>
+  </div>
 </div>
