@@ -15,6 +15,8 @@
 
 $cakeDescription = 'CakePHP: the rapid development php framework';
 ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -49,9 +51,13 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <div class="w3-quarter w3-container">
         </div>
       </div>
+      <div class="w3-container w3-small">
+      <div class="w3-right-align"><p><?= __('Logged in as: ') . $LoggedInUsername ?></p></div>
+    </div>
 
-        <?= $this->Nav->main(); ?>
-        <?= $this->fetch('content') ?>
+    <?= $this->Nav->main(); ?>
+    <?= $this->fetch('content') ?>
+
     <footer>
     </footer>
     </div>

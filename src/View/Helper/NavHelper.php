@@ -28,7 +28,10 @@ use Cake\View\Helper;
                 <a href="#" class="w3-bar-item w3-button w3-theme-d2">ActorDB</a>' .
                 $this->Html->link(__('Add Bookmarks'), ['controller' => 'Bookmarks', 'action' => 'add'], ['class' => 'w3-bar-item w3-button w3-hide-small']) .
                 $this->Html->link(__('List Bookmarks'), ['controller' => 'Bookmarks', 'action' => 'index'], ['class' => 'w3-bar-item w3-button w3-hide-small']) .
-                $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index'], ['class' => 'w3-bar-item w3-button w3-hide-small']) . '
+                $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index'], ['class' => 'w3-bar-item w3-button w3-hide-small']) .
+								// $this->Html->link($this->Users->get($this->Auth->user('id'))->email, ['controller' => 'Users', 'action' => 'logout'], ['class' => 'w3-bar-item w3-button w3-hide-small w3-right']) .
+								$this->Html->link(__('Logout'), ['controller' => 'Users', 'action' => 'logout'], ['class' => 'w3-bar-item w3-button w3-hide-small w3-right']) . '
+
                 <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="toggleMenu()">&#9776;</a>
               </div>
 

@@ -48,12 +48,47 @@ class AppController extends Controller
 
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
+        $this->loadComponent('Auth', [
+          'authenticate' => [
+              'Form' => [
+                  'fields' => [
+                      'username' => 'email',
+                      'password' => 'password'
+                  ]
+              ]
+          ],
+          'loginAction' => [
+              'controller' => 'Users',
+              'action' => 'login'
+          ],
+          'unauthorizedRedirect' => $this->referer() // If unauthorized, return them to page they were just on
+      ]);
 
-        /*
-         * Enable the following components for recommended CakePHP security settings.
-         * see https://book.cakephp.org/3.0/en/controllers/components/security.html
-         */
-        //$this->loadComponent('Security');
-        //$this->loadComponent('Csrf');
+      // Allow the display action so our pages controller
+      // continues to work.
+      $this->Auth->allow(['display']);
+
+      /*
+       * Enable the following components for recommended CakePHP security settings.
+       * see https://book.cakephp.org/3.0/en/controllers/components/security.html
+       */
+      $this->loadComponent('Security');
+      $this->loadComponent('Csrf');
+
+}
+
+/**
+ * Stuff to do always before rendering the View
+ *
+ * @return void
+ */
+public function beforeRender(Event $event)
+{
+      // make logged in user's name available to the view (mainly for menu)
+      $name="(none)";
+      if ($this->Auth->user()) {
+        $name = $this->Auth->user('email');
+      }
+      $this->set("LoggedInUsername", $name);
     }
 }
