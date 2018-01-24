@@ -18,7 +18,7 @@
 ?>
 <p>
 <p>
-<?= $this->Form->button(__('Login'), ['class' => 'w3-button w3-border w3-theme-l1 w3-round-xlarge w3-ripple w3-padding-small w3-right']) ?>
+<?= $this->Form->button(__('Login'), ['class' => 'w3-button w3-border w3-theme-l1 w3-round-xlarge w3-ripple w3-padding-small w3-small w3-right']) ?>
 <p>
 <?= $this->Form->end() ?>
 
