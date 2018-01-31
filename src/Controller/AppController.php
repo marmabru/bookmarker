@@ -87,7 +87,7 @@ public function beforeRender(Event $event)
       // make logged in user's name available to the view (mainly for menu)
       $name="(none)";
       if ($this->Auth->user()) {
-        $name = $this->Auth->user('email');
+        $name =  $this->Auth->user('firstname') . ' ' . $this->Auth->user('lastname');
       }
       $this->set("LoggedInUsername", $name);
     }
