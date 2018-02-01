@@ -1,0 +1,2 @@
+msgid "Actors List"
+msgstr "Actors List"

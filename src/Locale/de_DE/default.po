@@ -1,0 +1,14 @@
+msgid "Actors List"
+msgstr "Liste der Schauspieler"
+
+msgid "Female"
+msgstr "weiblich"
+
+msgid "Gender"
+msgstr "Geschlecht"
+
+msgid "Male"
+msgstr "männlich"
+
+msgid "The actor has been saved."
+msgstr "Schauspielerdaten wurden gespeichert."

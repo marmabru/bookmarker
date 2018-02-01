@@ -25,11 +25,8 @@
             echo $this->Form->control('artist_name');
             echo $this->Form->control('birthdate', ['empty' => true]);
             echo $this->Form->input('gender', array(
+                'label' => __('Gender'),
                 'options' => $genderList,
-                'empty' => __('(choose one)')
-            ));
-            echo $this->Form->input('gender', array(
-                'options' => array('M'=>__('Male'), 'F'=>__('Female')),
                 'empty' => __('(choose one)')
             ));
             echo $this->Form->control('playing_age_from');
