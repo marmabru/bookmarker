@@ -16,6 +16,7 @@ namespace App\Controller;
 
 use Cake\Controller\Controller;
 use Cake\Event\Event;
+use Cake\I18n\I18n;
 
 /**
  * Application Controller
@@ -75,6 +76,8 @@ class AppController extends Controller
       $this->loadComponent('Security');
       $this->loadComponent('Csrf');
 
+      $this->loadModel('Users');  // Make Users and its components available in all Controllers
+
 }
 
 /**
@@ -84,11 +87,28 @@ class AppController extends Controller
  */
 public function beforeRender(Event $event)
 {
-      // make logged in user's name available to the view (mainly for menu)
-      $name="(none)";
-      if ($this->Auth->user()) {
+      $name=__('(none)');
+      $currentLanguage='EN';     // default if nothing is set anywhere yet
+
+      if ($this->Auth && $this->Auth->user()) {   // if User is logged in, we can set some Information
         $name =  $this->Auth->user('firstname') . ' ' . $this->Auth->user('lastname');
+        $currentLanguage = $this->Auth->user('language'); // initialize currentLanguage with what is in the User config
       }
+      if ($this->request->session()->read('currentLanguage') != '') {   // if user has set the language in this session, then use this one
+        $currentLanguage = $this->request->session()->read('currentLanguage');
+      }
+
+      // make logged in user's name available to the view (mainly for menu)
       $this->set("LoggedInUsername", $name);
+
+      // make list of languages available to the view (for menu)
+      $languageList = $this->Users->getLanguageList();
+      $this->set("LanguageList", $languageList);
+
+      // make currently selected language available to the view (for menu)
+
+      $this->set("CurrentLanguage", $currentLanguage);
+
+      I18n::setLocale($currentLanguage);    // Set the session language
     }
 }

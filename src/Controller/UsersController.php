@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\I18n\I18n;
 
 /**
  * Users Controller
@@ -111,6 +112,33 @@ class UsersController extends AppController
         } else {
             $this->Flash->error(__('The user could not be deleted. Please, try again.'));
         }
+
+        return $this->redirect(['action' => 'index']);
+    }
+
+    /**
+     * set the default language for a user
+     *
+     * @param string|null $languageKey
+     * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
+     * @throws \Cake\Network\Exception\NotFoundException When record not found.
+     */
+    public function setLanguage($languageKey = null)
+    {
+        I18n::setLocale($languageKey);    // Set the session language
+
+        $this->request->session()->write('currentLanguage', $languageKey);
+        $user = $this->Users->get($this->Auth->user('id'));
+
+        $user->set('language', $languageKey);
+
+        if ($this->Users->save($user)) {
+          $this->Flash->success(__('Language setting has been saved to User record.'));
+
+          return $this->redirect(['action' => 'index']);
+        }
+        $this ->Flash->error(__('Language for the User could not be saved. Please, try again.')) ;
+        $this->set(compact('user'));
 
         return $this->redirect(['action' => 'index']);
     }

@@ -1,14 +1,29 @@
 msgid "Actors List"
 msgstr "Liste der Schauspieler"
 
+msgid "Bulgarian"
+msgstr "Bulgarisch"
+
+msgid "English"
+msgstr "Englisch"
+
 msgid "Female"
 msgstr "weiblich"
 
 msgid "Gender"
 msgstr "Geschlecht"
 
+msgid "German"
+msgstr "Deutsch"
+
+msgid "Logged in as:"
+msgstr "Angemeldet als:"
+
 msgid "Male"
 msgstr "männlich"
+
+msgid "New User"
+msgstr "Neuer Nutzer"
 
 msgid "The actor has been saved."
 msgstr "Schauspielerdaten wurden gespeichert."

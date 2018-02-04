@@ -39,6 +39,7 @@ class UsersTable extends Table
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
+        $this->addBehavior('LanguageMapper');   // List of languages
 
         $this->hasMany('Bookmarks', [
             'foreignKey' => 'user_id'

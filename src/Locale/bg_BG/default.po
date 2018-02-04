@@ -1,2 +1,17 @@
 msgid "Actors List"
-msgstr "Actors List"
+msgstr "Списък на актьорите"
+
+msgid "Bulgarian"
+msgstr "български"
+
+msgid "German"
+msgstr "Немски"
+
+msgid "English"
+msgstr "Английски"
+
+msgid "Logged in as:"
+msgstr "Влезли сте като:"
+
+msgid "Logout"
+msgstr "Изход"

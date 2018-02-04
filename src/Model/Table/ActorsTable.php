@@ -43,7 +43,7 @@ class ActorsTable extends Table
         $this->hasMany('ActorPhotos', [
             'foreignKey' => 'actor_id'
         ]);
-        $this->addBehavior('GenderMapper');
+        $this->addBehavior('GenderMapper');   // genderList
     }
 
     /**

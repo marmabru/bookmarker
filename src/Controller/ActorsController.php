@@ -4,8 +4,6 @@ namespace App\Controller;
 use App\Controller\AppController;
 use Cake\I18n\I18n;
 
-
-
 /**
  * Actors Controller
  *
@@ -55,10 +53,6 @@ class ActorsController extends AppController
     public function add()
     {
 
-
-      // Prior to 3.5 use I18n::locale()
-      I18n::setLocale('de_DE');
-
         $actor = $this->Actors->newEntity();
         if ($this->request->is('post')) {
             $actor = $this->Actors->patchEntity($actor, $this->request->getData());
@@ -84,11 +78,6 @@ class ActorsController extends AppController
      */
     public function edit($id = null)
     {
-
-
-      // Prior to 3.5 use I18n::locale()
-      I18n::setLocale('en_GB');
-
         $actor = $this->Actors->get($id, [
             'contain' => []
         ]);
