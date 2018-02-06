@@ -63,7 +63,7 @@ class UsersController extends AppController
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
-                $this->Flash->success(__('The user has been saved.'));
+                //$this->Flash->success(__('The user has been saved.'));
 
                 return $this->redirect(['action' => 'index']);
             }
@@ -87,7 +87,7 @@ class UsersController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
-                $this->Flash->success(__('The user has been saved.'));
+                //$this->Flash->success(__('The user has been saved.'));
 
                 return $this->redirect(['action' => 'index']);
             }
@@ -133,7 +133,7 @@ class UsersController extends AppController
         $user->set('language', $languageKey);
 
         if ($this->Users->save($user)) {
-          $this->Flash->success(__('Language setting has been saved to User record.'));
+          //$this->Flash->success(__('Language setting has been saved to User record.'));
 
           return $this->redirect(['action' => 'index']);
         }

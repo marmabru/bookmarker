@@ -88,7 +88,7 @@ class AppController extends Controller
 public function beforeRender(Event $event)
 {
       $name=__('(none)');
-      $currentLanguage='EN';     // default if nothing is set anywhere yet
+      $currentLanguage='en_GB';     // default if nothing is set anywhere yet
 
       if ($this->Auth && $this->Auth->user()) {   // if User is logged in, we can set some Information
         $name =  $this->Auth->user('firstname') . ' ' . $this->Auth->user('lastname');

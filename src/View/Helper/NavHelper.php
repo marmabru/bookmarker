@@ -22,18 +22,11 @@ use Cake\View\Helper;
 							// Language Dropdown
 							$menuLarge = $menuLarge .
 
-								'<div class="w3-dropdown-hover">
+								'<div class="w3-dropdown-hover w3-right">
 								<div class="w3-bar-item w3-button w3-center w3-container w3-right w3-round w3-tiny"><header>' . __('Language') . '</header>' .
 									$this->Html->image('flags/' . $this->_View->get('LanguageList')[$this->_View->get('CurrentLanguage')]['img'], ['class' => 'w3-round w3-image', 'style' => 'height:10px;width:20px']) .
 								'</div>
     							<div class="w3-dropdown-content w3-bar-block w3-card">';
-
-								// foreach ($this->_View->get('LanguageList') as $languageKey => $language) {
-								// 	$menuLarge = $menuLarge . '<a href="#" class="w3-bar-item w3-button w3-small">' .
-								// 	$this->Html->image('flags/' . $this->_View->get('LanguageList')[$languageKey]['img'], ['class' => 'w3-round w3-image', 'style' => 'height:10px;width:20px']) . ' ' .
-								// 	$language['name'] .
-								// 	'</a>';
-								// }
 
 								foreach ($this->_View->get('LanguageList') as $languageKey => $language) {
 									$menuLarge = $menuLarge .

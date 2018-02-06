@@ -41,17 +41,19 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 </head>
 <body>
     <?= $this->Flash->render() ?>
-    <div class="w3-content w3-theme-l5" style="max-width:960px">
+    <div class="w3-content" style="max-width:960px">
       <div class="w3-row w3-hide-small">
-        <div class="w3-quarter w3-container">
+        <div class="w3-quarter w3-container w3-text-orange">
+          <?= $this->Html->image('BetterCastMe-Logo1.png', ['alt' => 'Logo', 'class' => 'w3-round w3-image w3-padding', 'style' => 'width:70%;max-width:200px']); ?>
+          <br>
+          The Clever Way of Casting!
+        </br>
         </div>
-        <div class="w3-half w3-container w3-margin">
-          <?= $this->Html->image('header-pic-wide1.jpg', ['alt' => 'Header-Pic', 'class' => 'w3-circle w3-image']); ?>
-        </div>
-        <div class="w3-quarter w3-container">
+        <div class="w3-threequarter w3-container">
+          <?= $this->Html->image('header-pic-wide2.jpg', ['alt' => 'Header-Pic', 'class' => 'w3-round w3-image']); ?>
         </div>
       </div>
-      <div class="w3-container w3-small">
+      <div class="w3-container w3-tiny">
 
       <?php if ($LoggedInUsername != "(none)") : ?>
           <div class="w3-right-align"><p> <?= __('Logged in as:') . " " . $LoggedInUsername ?> </p></div>
