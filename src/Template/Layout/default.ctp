@@ -33,7 +33,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <!-- <?= $this->Html->css('cake.css') ?> -->
     <?= $this->Html->css('app.css') ?>
     <?= $this->Html->css('w3.css') ?>
-    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+    <?= $this->Html->css('w3-theme-blue-grey.css') ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>

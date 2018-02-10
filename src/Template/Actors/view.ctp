@@ -4,7 +4,7 @@
  * @var \App\Model\Entity\Actor $actor
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+<!-- <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('Edit Actor'), ['action' => 'edit', $actor->id]) ?> </li>
@@ -16,33 +16,28 @@
         <li><?= $this->Html->link(__('List Actor Photos'), ['controller' => 'ActorPhotos', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Actor Photo'), ['controller' => 'ActorPhotos', 'action' => 'add']) ?> </li>
     </ul>
-</nav>
+</nav> -->
+<div class='w3-container w3-red w3-card'>
+  <?php foreach ($actor->actor_photos as $actorPhoto): ?>
+      <?php if (h($actorPhoto->photo_type) == "1"): ?> <!-- FIXME DAS IF FUNKTIONIERT NICHT -->
+        <?= $this->Html->image($actorPhoto->file , ['alt' => 'Actor Photo', 'class' => 'w3-round w3-image w3-padding', 'style' => 'width:70%;max-width:200px']); ?>
+      <?php endif; ?>
+  <?php endforeach; ?>
+</div>
 <div class="actors view large-9 medium-8 columns content">
-    <h3><?= h($actor->id) ?></h3>
     <table class="vertical-table">
-        <tr>
-            <th scope="row"><?= __('User') ?></th>
-            <td><?= $actor->has('user') ? $this->Html->link($actor->user->id, ['controller' => 'Users', 'action' => 'view', $actor->user->id]) : '' ?></td>
-        </tr>
         <tr>
             <th scope="row"><?= __('Artist Name') ?></th>
             <td><?= h($actor->artist_name) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Gender') ?></th>
-            <td><?= h($actor->gender) ?></td>
+            <td><?= $genderList[$actor->gender] ?></td>
+            <td><?= $genderList ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($actor->id) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Playing Age From') ?></th>
-            <td><?= $this->Number->format($actor->playing_age_from) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Playing Age To') ?></th>
-            <td><?= $this->Number->format($actor->playing_age_to) ?></td>
+            <th scope="row"><?= __('Playing Age') ?></th>
+            <td><?= $this->Number->format($actor->playing_age_from) ?> - <?= $this->Number->format($actor->playing_age_to) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Eyecolor') ?></th>

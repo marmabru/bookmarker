@@ -22,7 +22,7 @@ class ActorsController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Users']
+            'contain' => ['Users', 'ActorPhotos']
         ];
         $actors = $this->paginate($this->Actors);
 
@@ -42,7 +42,8 @@ class ActorsController extends AppController
             'contain' => ['Users', 'ActorPhotos']
         ]);
 
-        $this->set('actor', $actor);
+        $genderList = $this->Actors->getGenderList();
+        $this->set(compact('actor', 'users', 'genderList'));
     }
 
     /**
