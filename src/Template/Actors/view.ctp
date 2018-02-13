@@ -17,9 +17,15 @@
         <li><?= $this->Html->link(__('New Actor Photo'), ['controller' => 'ActorPhotos', 'action' => 'add']) ?> </li>
     </ul>
 </nav> -->
-<div class='w3-container w3-red w3-card'>
+
+<div class='w3-container w3-card'>
   <?php foreach ($actor->actor_photos as $actorPhoto): ?>
-      <?php if (h($actorPhoto->photo_type) == "1"): ?> <!-- FIXME DAS IF FUNKTIONIERT NICHT -->
+      <?php if ($actorPhoto->photo_type == "1"): ?>
+        <?= $this->Html->image($actorPhoto->file , ['alt' => 'Actor Photo', 'class' => 'w3-round w3-image w3-padding', 'style' => 'width:70%;max-width:200px']); ?>
+      <?php endif; ?>
+  <?php endforeach; ?>
+  <?php foreach ($actor->actor_photos as $actorPhoto): ?>
+      <?php if ($actorPhoto->photo_type == "2"): ?>
         <?= $this->Html->image($actorPhoto->file , ['alt' => 'Actor Photo', 'class' => 'w3-round w3-image w3-padding', 'style' => 'width:70%;max-width:200px']); ?>
       <?php endif; ?>
   <?php endforeach; ?>
@@ -33,7 +39,6 @@
         <tr>
             <th scope="row"><?= __('Gender') ?></th>
             <td><?= $genderList[$actor->gender] ?></td>
-            <td><?= $genderList ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Playing Age') ?></th>
@@ -49,7 +54,7 @@
         </tr>
         <tr>
             <th scope="row"><?= __('Height Cm') ?></th>
-            <td><?= $this->Number->format($actor->height_cm) ?></td>
+            <td><?= $this->Number->format($actor->height_cm) ?>cm</td>
         </tr>
         <tr>
             <th scope="row"><?= __('Birthdate') ?></th>

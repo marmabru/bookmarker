@@ -1,17 +1,32 @@
 msgid "Actors List"
 msgstr "Liste der Schauspieler"
 
+msgid "Artist Name"
+msgstr "Künstlername"
+
+msgid "Birthdate"
+msgstr "Geburtsdatum"
+
 msgid "Bulgarian"
 msgstr "Bulgarisch"
 
 msgid "English"
 msgstr "Englisch"
 
+msgid "Eye Color"
+msgstr "Augenfarbe"
+
 msgid "Female"
 msgstr "weiblich"
 
 msgid "Gender"
 msgstr "Geschlecht"
+
+msgid "Hair Color"
+msgstr "Haarfarbe"
+
+msgid "Height"
+msgstr "Größe"
 
 msgid "German"
 msgstr "Deutsch"
@@ -22,8 +37,14 @@ msgstr "Angemeldet als:"
 msgid "Male"
 msgstr "männlich"
 
+msgid "Name"
+msgstr "Name"
+
 msgid "New User"
 msgstr "Neuer Nutzer"
+
+msgid "Playing Age"
+msgstr "Spielalter"
 
 msgid "The actor has been saved."
 msgstr "Schauspielerdaten wurden gespeichert."

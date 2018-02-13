@@ -25,8 +25,8 @@ class ActorsController extends AppController
             'contain' => ['Users', 'ActorPhotos']
         ];
         $actors = $this->paginate($this->Actors);
-
-        $this->set(compact('actors'));
+        $genderList = $this->Actors->getGenderList();
+        $this->set(compact('actors', 'users', 'genderList'));
     }
 
     /**
