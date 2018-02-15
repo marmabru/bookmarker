@@ -54,25 +54,29 @@
     <div class="w3-panel w3-card">
       <div class="w3-row">
         <div class="w3-col l2 m3 s5 w3-container">
-          <div class="w3-panel w3-small">
+          <div class="w3-panel w3-small w3-center">
 
-            <?php foreach ($actor->actor_photos as $actorPhoto): ?>
+            <?php if (isset($actor->actor_photos[0])): ?>
+              <?= $this->Html->image($actor->actor_photos[0]->file , ['alt' => 'Actor Photo', 'class' => 'w3-round w3-image', 'style' => 'width:100px;max-width:150px']); ?>
+            <?php else: ?>
+              <?= $this->Html->image('Photo_Missing_173.png' , ['alt' => 'Actor Photo', 'class' => 'w3-round w3-image', 'style' => 'width:100px;max-width:150px']); ?>
+            <?php endif ?>
+            <!-- <?php foreach ($actor->actor_photos as $actorPhoto): ?>
                 <?php if ($actorPhoto->photo_type == "1"): ?>
                   <?= $this->Html->image($actorPhoto->file , ['alt' => 'Actor Photo', 'class' => 'w3-round w3-image', 'style' => 'width:100px;max-width:150px']); ?>
                 <?php endif; ?>
-            <?php endforeach; ?>
+            <?php endforeach; ?> -->
 
-            <!-- <?= $this->Html->image('Actor-Pic-Sample.jpg', ['alt' => 'Picture', 'class' => 'w3-round w3-image', 'style' => 'width:100px;max-width:150px']); ?> -->
             <?= h($actor->artist_name) ?>
           </div>
         </div>
         <div class="w3-col l5 w3-hide-small w3-hide-medium w3-container">
           <div class="w3-panel">
-            <?php foreach ($actor->actor_photos as $actorPhoto): ?>
-                <?php if ($actorPhoto->photo_type == "2"): ?>
-                  <?= $this->Html->image($actorPhoto->file , ['alt' => 'Actor Photo', 'class' => 'w3-round w3-image', 'style' => 'width:70px;max-width:150px']); ?>
-                <?php endif; ?>
-            <?php endforeach; ?>
+            <?php for ($i = 1; $i <= 3; $i++): ?>
+              <?php if (isset($actor->actor_photos[$i])): ?>
+                <?= $this->Html->image($actor->actor_photos[$i]->file , ['alt' => 'Actor Photo', 'class' => 'w3-round w3-image', 'style' => 'width:70px;max-width:150px']); ?>
+              <?php endif ?>
+            <?php endfor ?>
 
             <!-- <?= $this->Html->image('Photo_Missing_173.png', ['alt' => 'Picture', 'class' => 'w3-round w3-image w3-border', 'style' => 'height:100px;max-height:150px']); ?>
             <?= $this->Html->image('Photo_Missing_260.png', ['alt' => 'Picture', 'class' => 'w3-round w3-image w3-border', 'style' => 'height:100px;max-height:150px']); ?>
@@ -87,7 +91,9 @@
           <?= __('Name') . ': ' . h($actor->user->firstname) . ' ' . h($actor->user->lastname)?> </br>
           <?= __('Artist Name') . ': ' . h($actor->artist_name) ?> </br>
           <?= __('Birthdate') . ': ' . h($actor->birthdate) ?> </br>
-          <?= __('Gender') . ': ' . $genderList[$actor->gender] ?> </br>
+          <?php if (isset($genderList[$actor->gender])): ?>
+            <?= __('Gender') . ': ' . $genderList[$actor->gender] ?> </br>
+          <?php endif ?>
           <?= __('Playing Age') . ': ' . h($this->Number->format($actor->playing_age_from)) . '-' . h($this->Number->format($actor->playing_age_to)) ?> </br>
           <?= __('Eye Color') . ': ' . $this->Number->format($actor->eyecolor) ?> </br>
           <?= __('Hair Color') . ': ' . $this->Number->format($actor->haircolor) ?> </br>
