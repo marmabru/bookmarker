@@ -121,7 +121,6 @@ class UsersController extends AppController
      *
      * @param string|null $languageKey
      * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
-     * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
     public function setLanguage($languageKey = null)
     {
@@ -132,15 +131,17 @@ class UsersController extends AppController
 
         $user->set('language', $languageKey);
 
-        if ($this->Users->save($user)) {
-          //$this->Flash->success(__('Language setting has been saved to User record.'));
+        return $this->redirect($this->referer());
 
-          return $this->redirect(['action' => 'index']);
-        }
-        $this ->Flash->error(__('Language for the User could not be saved. Please, try again.')) ;
-        $this->set(compact('user'));
+        // if ($this->Users->save($user)) {
+        //   //$this->Flash->success(__('Language setting has been saved to User record.'));
+        //
+        //   return $this->redirect(['action' => 'index']);
+        // }
+        // $this ->Flash->error(__('Language for the User could not be saved. Please, try again.')) ;
+        // $this->set(compact('user'));
 
-        return $this->redirect(['action' => 'index']);
+        // return $this->redirect(['action' => 'index']);
     }
 
     public function login()
