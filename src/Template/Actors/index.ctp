@@ -33,21 +33,22 @@
           Agency XYZ
         </div>
       </div>
-      <div class='w3-col w3-display l5 m9 s7'>
-        <table class="w3-table w3-small" >
-          <?php echo $this->element('Lists/actordetails', ['key' => __('Name'), 'value' => h($actor->user->firstname) . ' ' . h($actor->user->lastname)]); ?>
-          <?php echo $this->element('Lists/actordetails', ['key' => __('Artist Name'), 'value' => h($actor->artist_name)]); ?>
-          <?php echo $this->element('Lists/actordetails', ['key' => __('Birthdate'), 'value' => h($actor->birthdate)]); ?>
+      <div class='w3-col w3-display l5 m9 s7 w3-padding'>
+        <ul class="w3-ul w3-small">
+        <!-- <table class="w3-table w3-small" > -->
+          <?php echo $this->element('Lists/actordetails-condensed', ['key' => __('Name'), 'value' => h($actor->user->firstname) . ' ' . h($actor->user->lastname)]); ?>
+          <?php echo $this->element('Lists/actordetails-condensed', ['key' => __('Artist Name'), 'value' => h($actor->artist_name)]); ?>
+          <?php echo $this->element('Lists/actordetails-condensed', ['key' => __('Birthdate'), 'value' => h($actor->birthdate)]); ?>
           <?php if (isset($genderList[$actor->gender])): ?>
-            <?php echo $this->element('Lists/actordetails', ['key' => __('Gender'), 'value' => h($genderList[$actor->gender])]); ?>
+            <?php echo $this->element('Lists/actordetails-condensed', ['key' => __('Gender'), 'value' => h($genderList[$actor->gender])]); ?>
           <?php endif ?>
-          <?php echo $this->element('Lists/actordetails', ['key' => __('Playing Age'), 'value' => h($this->Number->format($actor->playing_age_from)) . '-' . h($this->Number->format($actor->playing_age_to))]); ?>
-          <?php echo $this->element('Lists/actordetails', ['key' => __('Eye Color'), 'value' => h($this->Number->format($actor->eyecolor))]); ?>
-          <?php echo $this->element('Lists/actordetails', ['key' => __('Hair Color'), 'value' => h($this->Number->format($actor->haircolor))]); ?>
-          <?php echo $this->element('Lists/actordetails', ['key' => __('Height'), 'value' => h($this->Number->format($actor->height_cm))]); ?>
-        </table>
+          <?php echo $this->element('Lists/actordetails-condensed', ['key' => __('Playing Age'), 'value' => h($this->Number->format($actor->playing_age_from)) . '-' . h($this->Number->format($actor->playing_age_to))]); ?>
+          <?php echo $this->element('Lists/actordetails-condensed', ['key' => __('Eye Color'), 'value' => h($this->Number->format($actor->eyecolor))]); ?>
+          <?php echo $this->element('Lists/actordetails-condensed', ['key' => __('Hair Color'), 'value' => h($this->Number->format($actor->haircolor))]); ?>
+          <?php echo $this->element('Lists/actordetails-condensed', ['key' => __('Height'), 'value' => h($this->Number->format($actor->height_cm))]); ?>
+        </ul>
         </br>
-        <div class='w3-container w3-right'>
+        <div class='w3-container w3-right w3-padding'>
           <?= $this->Html->link(__('Details'), ['action' => 'view', $actor->id], ['class' => 'w3-button w3-small w3-border w3-padding-small w3-round-xlarge w3-ripple']) ?>
         </div>
       </div>
