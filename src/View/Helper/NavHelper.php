@@ -42,7 +42,7 @@ use Cake\View\Helper;
 
 							// Logout Button
 							if ($this->_View->get('LoggedInUsername') != '(none)') {
-									$menuLarge = $menuLarge . '<div class="w3-bar-item w3-right w3-hide-small">' . $this->Html->link(__('Logout'), ['controller' => 'Users', 'action' => 'logout'], ['class' => 'w3-button w3-small w3-border w3-padding-small w3-theme-l1 w3-round-xlarge w3-ripple']) . '</div>';
+									$menuLarge = $menuLarge . '<div class="w3-bar-item w3-right w3-hide-small">' . $this->Html->link(__('Logout'), ['controller' => 'Users', 'action' => 'logout'], ['class' => 'w3-button w3-small w3-border w3-padding-small w3-round-xlarge w3-ripple']) . '</div>';
 							}
 
 							$menuSmall = '

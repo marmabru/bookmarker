@@ -56,7 +56,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
       <div class="w3-container w3-tiny">
 
       <?php if ($LoggedInUsername != "(none)") : ?>
-          <div class="w3-right-align"><p> <?= __('Logged in as:') . " " . $LoggedInUsername ?> </p></div>
+          <div class="w3-right-align"><?= __('Logged in as:') . " " . $LoggedInUsername . " "?>
+          </div>
       <?php else : ?>
           <div class="w3-right-align"><p> <?= __('Not logged in') ?> </p></div>
       <?php endif; ?>

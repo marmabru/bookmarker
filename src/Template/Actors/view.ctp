@@ -30,35 +30,33 @@
       <?php endif; ?>
   <?php endforeach; ?>
 </div>
-<div class="actors view large-9 medium-8 columns content">
-    <table class="vertical-table">
-        <tr>
-            <th scope="row"><?= __('Artist Name') ?></th>
-            <td><?= h($actor->artist_name) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Gender') ?></th>
-            <td><?= $genderList[$actor->gender] ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Playing Age') ?></th>
-            <td><?= $this->Number->format($actor->playing_age_from) ?> - <?= $this->Number->format($actor->playing_age_to) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Eyecolor') ?></th>
-            <td><?= $this->Number->format($actor->eyecolor) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Haircolor') ?></th>
-            <td><?= $this->Number->format($actor->haircolor) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Height Cm') ?></th>
-            <td><?= $this->Number->format($actor->height_cm) ?>cm</td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Birthdate') ?></th>
-            <td><?= h($actor->birthdate) ?></td>
-        </tr>
-    </table>
+
+<div class='w3-container w3-card w3-theme-l3'>
+  <h4><?= __('Personal Info') ?></h4>
 </div>
+
+<div class='w3-col w3-display l5 m9 s7 w3-theme-l5'>
+  <table class="w3-table w3-normal" >
+    <?php echo $this->element('Lists/actordetails', ['key' => __('Name'), 'value' => h($actor->user->firstname) . ' ' . h($actor->user->lastname)]); ?>
+    <?php echo $this->element('Lists/actordetails', ['key' => __('Artist Name'), 'value' => h($actor->artist_name)]); ?>
+    <?php echo $this->element('Lists/actordetails', ['key' => __('Birthdate'), 'value' => $actor->birthdate->i18nFormat([\IntlDateFormatter::MEDIUM, \IntlDateFormatter::NONE])]); ?>
+    <?php if (isset($genderList[$actor->gender])): ?>
+      <?php echo $this->element('Lists/actordetails', ['key' => __('Gender'), 'value' => h($genderList[$actor->gender])]); ?>
+    <?php endif ?>
+    <?php echo $this->element('Lists/actordetails', ['key' => __('Playing Age'), 'value' => h($this->Number->format($actor->playing_age_from)) . '-' . h($this->Number->format($actor->playing_age_to))]); ?>
+    <?php echo $this->element('Lists/actordetails', ['key' => __('Eye Color'), 'value' => h($this->Number->format($actor->eyecolor))]); ?>
+    <?php echo $this->element('Lists/actordetails', ['key' => __('Hair Color'), 'value' => h($this->Number->format($actor->haircolor))]); ?>
+    <?php echo $this->element('Lists/actordetails', ['key' => __('Height'), 'value' => h($this->Number->format($actor->height_cm))]); ?>
+  </table>
+  </br>
+</div>
+
+<div class='w3-container w3-card w3-theme-l3'>
+  <h4><?= __('Appearance') ?></h4>
+</div>
+Bla bla to be filled with important information
+
+<div class='w3-container w3-card w3-theme-l3'>
+  <h4><?= __('Experience') ?></h4>
+</div>
+Bla bla to be filled with important information
