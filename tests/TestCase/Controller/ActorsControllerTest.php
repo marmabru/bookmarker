@@ -18,9 +18,6 @@ class ActorsControllerTest extends IntegrationTestCase
     public $fixtures = [
         'app.actors',
         'app.users',
-        'app.bookmarks',
-        'app.tags',
-        'app.bookmarks_tags',
         'app.actor_photos',
         'app.actor_personal_infos'
     ];

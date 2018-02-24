@@ -9,8 +9,6 @@ use Cake\Validation\Validator;
 /**
  * Users Model
  *
- * @property \App\Model\Table\BookmarksTable|\Cake\ORM\Association\HasMany $Bookmarks
- *
  * @method \App\Model\Entity\User get($primaryKey, $options = [])
  * @method \App\Model\Entity\User newEntity($data = null, array $options = [])
  * @method \App\Model\Entity\User[] newEntities(array $data, array $options = [])
@@ -40,10 +38,6 @@ class UsersTable extends Table
 
         $this->addBehavior('Timestamp');
         $this->addBehavior('LanguageMapper');   // List of languages
-
-        $this->hasMany('Bookmarks', [
-            'foreignKey' => 'user_id'
-        ]);
     }
 
     /**

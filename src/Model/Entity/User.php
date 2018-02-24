@@ -14,8 +14,6 @@ use Cake\ORM\Entity;
  * @property string $password
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
- *
- * @property \App\Model\Entity\Bookmark[] $bookmarks
  */
 class User extends Entity
 {
@@ -35,7 +33,6 @@ class User extends Entity
         'created' => true,
         'modified' => true,
         'language' => true,
-        'bookmarks' => true,
     ];
 
     /**
