@@ -17,7 +17,7 @@ class GenderMapperBehavior extends Behavior
         'M'=>__('Male'),
         'F'=>__('Female')
       );
-    debug(__('Male') . '=' . $genderList['M']);
+//    debug(__('Male') . '=' . $genderList['M']);
     return $genderList;
   }
 }

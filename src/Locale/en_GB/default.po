@@ -1,2 +1,5 @@
-msgid "Actors List"
-msgstr "Actors List"
+msgid "Bulgarian"
+msgstr "български"
+
+msgid "German"
+msgstr "Deutsch"

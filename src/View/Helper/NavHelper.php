@@ -13,8 +13,8 @@ use Cake\View\Helper;
 		public function main() {
 
       				$menuLarge = '<!-- Menu -->
-                <div class="w3-bar w3-theme-l2">
-                <a href="#" class="w3-bar-item w3-button w3-theme-d2">ActorDB</a>' .
+                <div class="w3-bar w3-theme-d1">' .
+                $this->Html->image('BetterCastMe-Logo1.png', ['alt' => 'Logo', 'class' => 'w3-round w3-image w3-padding w3-left', 'style' => 'height:50px']) .
                 $this->Html->link(__('Actors List'), ['controller' => 'Actors', 'action' => 'index'], ['class' => 'w3-bar-item w3-button w3-hide-small']) .
                 $this->Html->link(__('List Bookmarks'), ['controller' => 'Bookmarks', 'action' => 'index'], ['class' => 'w3-bar-item w3-button w3-hide-small']) .
                 $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index'], ['class' => 'w3-bar-item w3-button w3-hide-small']);
