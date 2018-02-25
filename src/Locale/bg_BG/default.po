@@ -5,10 +5,10 @@ msgid "Bulgarian"
 msgstr "български"
 
 msgid "German"
-msgstr "Немски"
+msgstr "Deutsch"
 
 msgid "English"
-msgstr "Английски"
+msgstr "English"
 
 msgid "Logged in as:"
 msgstr "Влезли сте като:"

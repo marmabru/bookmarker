@@ -15,8 +15,8 @@ use Cake\View\Helper;
       				$menuLarge = '<!-- Menu -->
                 <div class="w3-bar w3-theme-d1">' .
                 $this->Html->image('BetterCastMe-Logo1.png', ['alt' => 'Logo', 'class' => 'w3-round w3-image w3-padding w3-left', 'style' => 'height:50px']) .
-                $this->Html->link(__('Actors List'), ['controller' => 'Actors', 'action' => 'index'], ['class' => 'w3-bar-item w3-button w3-hide-small']) .
-                $this->Html->link(__('List Bookmarks'), ['controller' => 'Bookmarks', 'action' => 'index'], ['class' => 'w3-bar-item w3-button w3-hide-small']) .
+                $this->Html->link(__('Search Actor'), ['controller' => 'Actors', 'action' => 'search'], ['class' => 'w3-bar-item w3-button w3-hide-small']) .
+								$this->Html->link(__('Actors List'), ['controller' => 'Actors', 'action' => 'index'], ['class' => 'w3-bar-item w3-button w3-hide-small']) .
                 $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index'], ['class' => 'w3-bar-item w3-button w3-hide-small']);
 
 							// Language Dropdown
@@ -51,7 +51,6 @@ use Cake\View\Helper;
 
               <div id="mainmenu" class="w3-bar-block w3-theme-l2 w3-hide w3-hide-large w3-hide-medium">' .
               $this->Html->link(__('Actors List'), ['controller' => 'Actors', 'action' => 'index'], ['class' => 'w3-bar-item w3-button']) .
-              $this->Html->link(__('List Bookmarks'), ['controller' => 'Bookmarks', 'action' => 'index'], ['class' => 'w3-bar-item w3-button']) .
               $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index'], ['class' => 'w3-bar-item w3-button']) .
 							'<div class="w3-bar-item w3-right">' . $this->Html->link(__('Logout'), ['controller' => 'Users', 'action' => 'logout'], ['class' => 'w3-button w3-small w3-border w3-padding-small w3-theme-l1 w3-round-xlarge w3-ripple']) . '</div>
               </div>';

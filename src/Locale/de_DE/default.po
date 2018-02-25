@@ -8,10 +8,10 @@ msgid "Birthdate"
 msgstr "Geburtsdatum"
 
 msgid "Bulgarian"
-msgstr "Bulgarisch"
+msgstr "български"
 
 msgid "English"
-msgstr "Englisch"
+msgstr "English"
 
 msgid "Eye Color"
 msgstr "Augenfarbe"

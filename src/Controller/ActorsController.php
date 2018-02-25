@@ -114,4 +114,45 @@ class ActorsController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+
+    /**
+     * Search method
+     *
+     * @return \Cake\Http\Response|null Performs search shows the list of results
+     * @throws \Cake\Network\Exception\NotFoundException When record not found.
+     */
+    public function search()
+    {
+        if ($this->request->is(['patch', 'post', 'put'])) {
+            $searchCrits = $this->request->getData();
+
+            $query = $this->Actors->find();
+
+            // Now add the WHERE parts by iterating over the searchCrits
+            foreach ($searchCrits as $searchKey => $searchValue) {
+              if ($searchValue) {
+                // only include searchKeys where the user set a value
+                $query = $query->where([$searchKey => $searchValue]);
+              }
+            }
+            // ->orWhere(['author_id' => 3])
+            // ->andWhere([
+            //   'published' => true,
+            //   'view_count >' => 10
+            // ])
+            // ->orWhere(['promoted' => true]);
+
+            $this->paginate = [
+                'contain' => ['Users', 'ActorPhotos']
+            ];
+
+            $actors = $this->paginate($query);
+
+            $users = $this->Actors->Users->find('list', ['limit' => 200]); // FIXME: Hier sollten die User gesucht werden, die in dem Query-Ergebnis für $actors referenziert werden
+            $this->set(compact('actors', $this->paginate($query), 'users'));
+
+            $this->render('/Actors/index');
+          }
+
+    }
 }
