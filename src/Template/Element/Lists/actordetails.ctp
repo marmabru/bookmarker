@@ -5,6 +5,6 @@
 </tr> -->
 
 <li class="w3-bar">
-  <div  class="w3-bar-item" style="width:40%; "><b><?= h($key) . ': ' ?></b></div>
+  <div  class="w3-bar-item w3-text-gray" style="width:40%; "><?= h($key) . ': ' ?></div>
   <div  class="w3-bar-item""><?= h($value) ?></div>
 </li>

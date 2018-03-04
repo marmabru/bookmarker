@@ -38,7 +38,7 @@
         <!-- <table class="w3-table w3-small" > -->
           <?php echo $this->element('Lists/actordetails-condensed', ['key' => __('Name'), 'value' => h($actor->user->firstname) . ' ' . h($actor->user->lastname)]); ?>
           <?php echo $this->element('Lists/actordetails-condensed', ['key' => __('Artist Name'), 'value' => h($actor->artist_name)]); ?>
-          <?php echo $this->element('Lists/actordetails-condensed', ['key' => __('Birthdate'), 'value' => h($actor->birthdate)]); ?>
+          <?php echo $this->element('Lists/actordetails-condensed', ['key' => __('Date of Birth'), 'value' => h($actor->birthdate)]); ?>
           <?php if (isset($genderList[$actor->gender])): ?>
             <?php echo $this->element('Lists/actordetails-condensed', ['key' => __('Gender'), 'value' => h($genderList[$actor->gender])]); ?>
           <?php endif ?>

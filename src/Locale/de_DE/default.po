@@ -4,7 +4,7 @@ msgstr "Liste der Schauspieler"
 msgid "Artist Name"
 msgstr "Künstlername"
 
-msgid "Birthdate"
+msgid "Date of Birth"
 msgstr "Geburtsdatum"
 
 msgid "Bulgarian"
@@ -19,17 +19,23 @@ msgstr "Augenfarbe"
 msgid "Female"
 msgstr "weiblich"
 
+msgid "First Name"
+msgstr "Vorname"
+
 msgid "Gender"
 msgstr "Geschlecht"
 
 msgid "Hair Color"
 msgstr "Haarfarbe"
 
-msgid "Height"
-msgstr "Größe"
+msgid "Height (cm)"
+msgstr "Größe (in cm)"
 
 msgid "German"
 msgstr "Deutsch"
+
+msgid "Last Name"
+msgstr "Nachname"
 
 msgid "Logged in as:"
 msgstr "Angemeldet als:"

@@ -132,7 +132,12 @@ class ActorsController extends AppController
             foreach ($searchCrits as $searchKey => $searchValue) {
               if ($searchValue) {
                 // only include searchKeys where the user set a value
-                $query = $query->where([$searchKey => $searchValue]);
+                if ($searchKey == 'playing_age') {
+                  $query = $query->where(['playing_age_from <' => $searchValue]);
+                  $query = $query->where(['playing_age_to >' => $searchValue]);
+                } else {
+                  $query = $query->where([$searchKey => $searchValue]);
+                }
               }
             }
             // ->orWhere(['author_id' => 3])
