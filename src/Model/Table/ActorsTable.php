@@ -43,6 +43,9 @@ class ActorsTable extends Table
         $this->hasMany('ActorPhotos', [
             'foreignKey' => 'actor_id'
         ]);
+        $this->hasOne('Eyecolors', [
+            'foreignKey' => 'eyecolor_id'
+        ]);
         $this->addBehavior('GenderMapper');   // genderList
     }
 
@@ -81,10 +84,10 @@ class ActorsTable extends Table
             ->allowEmpty('playing_age_to');
 
         $validator
-            ->allowEmpty('eyecolor');
+            ->allowEmpty('eyecolor_id');
 
         $validator
-            ->allowEmpty('haircolor');
+            ->allowEmpty('haircolor_id');
 
         $validator
             ->integer('height_cm')

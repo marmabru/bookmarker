@@ -24,8 +24,8 @@ class ActorsFixture extends TestFixture
         'gender' => ['type' => 'string', 'fixed' => true, 'length' => 1, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null],
         'playing_age_from' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'playing_age_to' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-        'eyecolor' => ['type' => 'smallinteger', 'length' => 11, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
-        'haircolor' => ['type' => 'smallinteger', 'length' => 6, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
+        'eyecolor_id' => ['type' => 'smallinteger', 'length' => 11, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
+        'haircolor_id' => ['type' => 'smallinteger', 'length' => 6, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
         'height_cm' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         '_indexes' => [
             'user_id' => ['type' => 'index', 'columns' => ['user_id'], 'length' => []],
@@ -55,8 +55,8 @@ class ActorsFixture extends TestFixture
             'gender' => 'Lorem ipsum dolor sit ame',
             'playing_age_from' => 1,
             'playing_age_to' => 1,
-            'eyecolor' => 1,
-            'haircolor' => 1,
+            'eyecolor_id' => 1,
+            'haircolor_id' => 1,
             'height_cm' => 1
         ],
     ];

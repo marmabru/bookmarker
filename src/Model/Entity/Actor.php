@@ -13,8 +13,8 @@ use Cake\ORM\Entity;
  * @property string $gender
  * @property int $playing_age_from
  * @property int $playing_age_to
- * @property int $eyecolor
- * @property int $haircolor
+ * @property int $eyecolor_id
+ * @property int $haircolor_id
  * @property int $height_cm
  *
  * @property \App\Model\Entity\User $user
@@ -41,8 +41,8 @@ class Actor extends Entity
         'gender' => true,
         'playing_age_from' => true,
         'playing_age_to' => true,
-        'eyecolor' => true,
-        'haircolor' => true,
+        'eyecolor_id' => true,
+        'haircolor_id' => true,
         'height_cm' => true,
         'user' => true,
         'actor_photos' => true

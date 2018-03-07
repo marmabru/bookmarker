@@ -31,12 +31,12 @@
           <div class="w3-container w3-cell" style="width:50%">
             <ul class="w3-ul">
               <?php echo $this->element('Lists/actorsearch', ['field' => 'playing_age', 'label' => __('Playing Age')]); ?>
-              <?php echo $this->element('Lists/actorsearch', ['field' => 'eyecolor', 'label' => __('Eye Color')]); ?>
+              <?php echo $this->element('Lists/actorsearch', ['field' => 'eyecolor_id', 'label' => __('Eye Color')]); ?>
             </ul>
           </div>
           <div class="w3-container w3-cell">
             <ul class="w3-ul">
-                <?php echo $this->element('Lists/actorsearch', ['field' => 'haircolor', 'label' => __('Hair Color')]); ?>
+                <?php echo $this->element('Lists/actorsearch', ['field' => 'haircolor_id', 'label' => __('Hair Color')]); ?>
                 <?php echo $this->element('Lists/actorsearch', ['field' => 'height_cm', 'label' => __('Height (cm)')]); ?>
             </ul>
           </div>

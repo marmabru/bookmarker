@@ -32,8 +32,8 @@
             echo $this->Form->control('gender');
             echo $this->Form->control('playing_age_from');
             echo $this->Form->control('playing_age_to');
-            echo $this->Form->control('eyecolor');
-            echo $this->Form->control('haircolor');
+            echo $this->Form->control('eyecolor_id');
+            echo $this->Form->control('haircolor_id');
             echo $this->Form->control('height_cm');
         ?>
     </fieldset>

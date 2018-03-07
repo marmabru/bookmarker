@@ -26,7 +26,9 @@ class ActorsController extends AppController
         ];
         $actors = $this->paginate($this->Actors);
         $genderList = $this->Actors->getGenderList();
-        $this->set(compact('actors', 'users', 'genderList'));
+        $query = $this->Actors->Eyecolors->find('all');
+        $eyecolorList = $query->toArray();
+        $this->set(compact('actors', 'users', 'genderList', 'eyecolorList'));
     }
 
     /**

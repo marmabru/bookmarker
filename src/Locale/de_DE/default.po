@@ -52,5 +52,8 @@ msgstr "Neuer Nutzer"
 msgid "Playing Age"
 msgstr "Spielalter"
 
+msgid "Search Actor"
+msgstr "Schauspieler-Suche"
+
 msgid "The actor has been saved."
 msgstr "Schauspielerdaten wurden gespeichert."
