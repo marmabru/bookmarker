@@ -3,6 +3,9 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use Cake\I18n\I18n;
+use Cake\ORM\Behavior\Translate\TranslateTrait;
+use Cake\ORM\Entity;
+
 
 /**
  * Actors Controller
@@ -13,6 +16,7 @@ use Cake\I18n\I18n;
  */
 class ActorsController extends AppController
 {
+    use TranslateTrait; // activate Translate Trait for Translations
 
     /**
      * Index method
@@ -26,8 +30,10 @@ class ActorsController extends AppController
         ];
         $actors = $this->paginate($this->Actors);
         $genderList = $this->Actors->getGenderList();
+
         $query = $this->Actors->Eyecolors->find('all');
         $eyecolorList = $query->toArray();
+
         $this->set(compact('actors', 'users', 'genderList', 'eyecolorList'));
     }
 

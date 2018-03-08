@@ -81,11 +81,11 @@ class AppController extends Controller
 }
 
 /**
- * Stuff to do always before rendering the View
+ * Stuff to do always before handing control to a controller function
  *
  * @return void
  */
-public function beforeRender(Event $event)
+public function beforeFilter(Event $event)
 {
       $name=__('(none)');
       $currentLanguage='en_GB';     // default if nothing is set anywhere yet

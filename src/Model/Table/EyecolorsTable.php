@@ -33,6 +33,9 @@ class EyecolorsTable extends Table
         $this->setTable('eyecolors');
         $this->setDisplayField('id');
         $this->setPrimaryKey('id');
+
+        $this->addBehavior('Translate', ['fields' => ['eyecolor']]);
+
     }
 
     /**
