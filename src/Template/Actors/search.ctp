@@ -21,7 +21,7 @@
           <div class="w3-container w3-cell">
             <ul class="w3-ul">
               <?php echo $this->element('Lists/actorsearch', ['field' => 'birthdate', 'label' => __('Date of Birth')]); ?>
-              <?php echo $this->element('Lists/actorsearch', ['field' => 'gender', 'label' => __('Gender')]); ?>
+              <?php echo $this->element('Lists/actorsearch', ['field' => 'gender', 'label' => __('Gender'), 'options' => $genderList]); ?>
             </ul>
           </div>
         </div>
@@ -31,7 +31,7 @@
           <div class="w3-container w3-cell" style="width:50%">
             <ul class="w3-ul">
               <?php echo $this->element('Lists/actorsearch', ['field' => 'playing_age', 'label' => __('Playing Age')]); ?>
-              <?php echo $this->element('Lists/actorsearch', ['field' => 'eyecolor_id', 'label' => __('Eye Color')]); ?>
+              <?php echo $this->element('Lists/actorsearch', ['field' => 'eyecolor_id', 'label' => __('Eye Color'), 'options' => $eyecolorList]); ?>
             </ul>
           </div>
           <div class="w3-container w3-cell">

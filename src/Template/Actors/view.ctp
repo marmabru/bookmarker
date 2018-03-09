@@ -47,7 +47,7 @@
   <div class="w3-container w3-cell">
     <ul class="w3-ul">
       <?php echo $this->element('Lists/actordetails', ['key' => __('Playing Age'), 'value' => h($this->Number->format($actor->playing_age_from)) . '-' . h($this->Number->format($actor->playing_age_to))]); ?>
-      <?php echo $this->element('Lists/actordetails', ['key' => __('Eye Color'), 'value' => h($this->Number->format($actor->eyecolor_id))]); ?>
+      <?php echo $this->element('Lists/actordetails', ['key' => __('Eye Color'), 'value' => h($eyecolorList[$actor->eyecolor_id])]); ?>
       <?php echo $this->element('Lists/actordetails', ['key' => __('Hair Color'), 'value' => h($this->Number->format($actor->haircolor_id))]); ?>
       <?php echo $this->element('Lists/actordetails', ['key' => __('Height'), 'value' => h($this->Number->format($actor->height_cm) . 'cm')]); ?>
     </ul>
@@ -63,7 +63,7 @@
         <?php echo $this->element('Lists/actordetails', ['key' => __('Gender'), 'value' => h($genderList[$actor->gender])]); ?>
       <?php endif ?>
       <?php echo $this->element('Lists/actordetails', ['key' => __('Playing Age'), 'value' => h($this->Number->format($actor->playing_age_from)) . '-' . h($this->Number->format($actor->playing_age_to))]); ?>
-      <?php echo $this->element('Lists/actordetails', ['key' => __('Eye Color'), 'value' => h($this->Number->format($actor->eyecolor_id))]); ?>
+      <?php echo $this->element('Lists/actordetails', ['key' => __('Eye Color'), 'value' => h($eyecolorList[$actor->eyecolor_id])]); ?>
       <?php echo $this->element('Lists/actordetails', ['key' => __('Hair Color'), 'value' => h($this->Number->format($actor->haircolor_id))]); ?>
       <?php echo $this->element('Lists/actordetails', ['key' => __('Height'), 'value' => h($this->Number->format($actor->height_cm) . 'cm')]); ?>
     </ul>
