@@ -87,6 +87,9 @@ class AppController extends Controller
  */
 public function beforeFilter(Event $event)
 {
+      /*
+       *  Set Language
+       */
       $name=__('(none)');
       $currentLanguage='en_GB';     // default if nothing is set anywhere yet
 

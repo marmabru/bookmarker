@@ -5,6 +5,7 @@ use App\Controller\AppController;
 use Cake\I18n\I18n;
 use Cake\ORM\Behavior\Translate\TranslateTrait;
 use Cake\ORM\Entity;
+use Cake\Event\Event;
 
 
 /**
@@ -29,14 +30,8 @@ class ActorsController extends AppController
             'contain' => ['Users', 'ActorPhotos']
         ];
         $actors = $this->paginate($this->Actors);
-        $genderList = $this->Actors->getGenderList();
 
-        $query = $this->Actors->Eyecolors->find('list', [
-          'keyField' => 'id',
-          'valueField' => 'eyecolor']);
-        $eyecolorList = $query->toArray();
-
-        $this->set(compact('actors', 'users', 'genderList', 'eyecolorList'));
+        $this->set(compact('actors', 'users'));
     }
 
     /**
@@ -52,8 +47,7 @@ class ActorsController extends AppController
             'contain' => ['Users', 'ActorPhotos']
         ]);
 
-        $genderList = $this->Actors->getGenderList();
-        $this->set(compact('actor', 'users', 'genderList'));
+        $this->set(compact('actor', 'users'));
     }
 
     /**
@@ -75,9 +69,8 @@ class ActorsController extends AppController
             $this->Flash->error(__('The actor could not be saved. Please, try again.'));
         }
         $users = $this->Actors->Users->find('list', ['limit' => 200]);
-        $genderList = $this->Actors->getGenderList();
 
-        $this->set(compact('actor', 'users', 'genderList'));
+        $this->set(compact('actor', 'users'));
     }
 
     /**
@@ -169,5 +162,28 @@ class ActorsController extends AppController
             $this->render('/Actors/index');
           }
 
+    }
+
+    /**
+     * Stuff to do always before handing control to a controller function
+     *
+     * @return void
+     */
+    public function beforeFilter(Event $event)
+    {
+          parent::beforeFilter($event); // don't forget to execute our parents filters...
+
+          /*
+           *  Set Mapping Arrays
+           */
+          $genderList = $this->Actors->getGenderList();
+          $this->set(compact('genderList'));
+
+          $query = $this->Actors->Eyecolors->find('list', [
+            'keyField' => 'id',
+            'valueField' => 'eyecolor']);
+          $eyecolorList = $query->toArray();
+
+          $this->set(compact('eyecolorList'));
     }
 }
