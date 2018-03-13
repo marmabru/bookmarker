@@ -6,12 +6,14 @@
           'options' => $options,
           'empty' => true,
           'class' => 'w3-bar-item w3-border w3-round',
-          'label' => ['class' => 'w3-bar-item w3-text-gray', 'style' => 'width:40%', 'text' => h($label) . ': ']]);
+          'style' => 'min-width:150px; width:60%',
+          'label' => ['class' => 'w3-bar-item w3-text-gray', 'style' => 'min-width:150px; width:40%', 'text' => h($label) . ': ']]);
   ?>
 <?php else: ?>
   <?php echo $this->Form->control($field, [
           'class' => 'w3-bar-item w3-border w3-round',
           'type' => 'text',
-          'label' => ['class' => 'w3-bar-item w3-text-gray', 'style' => 'width:40%', 'text' => h($label) . ': ']]);
+          'style' => 'min-width:150px; width:60%',
+          'label' => ['class' => 'w3-bar-item w3-text-gray', 'style' => 'min-width:150px; width:40%', 'text' => h($label) . ': ']]);
   ?>
 <?php endif ?>
