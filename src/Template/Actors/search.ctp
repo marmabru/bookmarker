@@ -30,13 +30,13 @@
         <div class="w3-cell-row w3-theme-l5 w3-mobile">
           <div class="w3-container w3-cell w3-mobile" style="min-width:320px">
             <ul class="w3-ul">
-              <?php echo $this->element('Lists/actorsearch', ['field' => 'playing_age', 'label' => __('Playing Age')]); ?>
+              <?php echo $this->element('Lists/actorsearch', ['field' => 'haircolor_id', 'label' => __('Hair Color'), 'options' => $haircolorList]); ?>
               <?php echo $this->element('Lists/actorsearch', ['field' => 'eyecolor_id', 'label' => __('Eye Color'), 'options' => $eyecolorList]); ?>
             </ul>
           </div>
           <div class="w3-container w3-cell w3-mobile" style="min-width:320px">
             <ul class="w3-ul">
-                <?php echo $this->element('Lists/actorsearch', ['field' => 'haircolor_id', 'label' => __('Hair Color')]); ?>
+                <?php echo $this->element('Lists/actorsearch', ['field' => 'playing_age', 'label' => __('Playing Age')]); ?>
                 <?php echo $this->element('Lists/actorsearch', ['field' => 'height_cm', 'label' => __('Height (cm)')]); ?>
             </ul>
           </div>

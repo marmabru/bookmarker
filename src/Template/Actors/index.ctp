@@ -44,7 +44,9 @@
           <?php endif ?>
           <?php echo $this->element('Lists/actordetails-condensed', ['key' => __('Playing Age'), 'value' => h($this->Number->format($actor->playing_age_from)) . '-' . h($this->Number->format($actor->playing_age_to))]); ?>
           <?php echo $this->element('Lists/actordetails-condensed', ['key' => __('Eye Color'), 'value' => h($eyecolorList[$actor->eyecolor_id])]); ?>
-          <?php echo $this->element('Lists/actordetails-condensed', ['key' => __('Hair Color'), 'value' => h($this->Number->format($actor->haircolor_id))]); ?>
+          <?php if (isset($haircolorList[$actor->haircolor_id])): ?>
+            <?php echo $this->element('Lists/actordetails-condensed', ['key' => __('Hair Color'), 'value' => h($haircolorList[$actor->haircolor_id])]); ?>
+          <?php endif ?>
           <?php echo $this->element('Lists/actordetails-condensed', ['key' => __('Height'), 'value' => h($this->Number->format($actor->height_cm))]); ?>
         </ul>
         </br>

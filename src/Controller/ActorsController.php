@@ -179,6 +179,9 @@ class ActorsController extends AppController
           $genderList = $this->Actors->getGenderList();
           $this->set(compact('genderList'));
 
+          $haircolorList = $this->Actors->getHaircolorList();
+          $this->set(compact('haircolorList'));
+
           $query = $this->Actors->Eyecolors->find('list', [
             'keyField' => 'id',
             'valueField' => 'eyecolor']);

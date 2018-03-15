@@ -24,18 +24,14 @@
     <ul class="w3-ul">
       <?php echo $this->element('Lists/actordetails', ['key' => __('Name'), 'value' => h($actor->user->firstname) . ' ' . h($actor->user->lastname)]); ?>
       <?php echo $this->element('Lists/actordetails', ['key' => __('Artist Name'), 'value' => h($actor->artist_name)]); ?>
-      <?php echo $this->element('Lists/actordetails', ['key' => __('Date of Birth'), 'value' => $actor->birthdate->i18nFormat([\IntlDateFormatter::MEDIUM, \IntlDateFormatter::NONE])]); ?>
-      <?php if (isset($genderList[$actor->gender])): ?>
-        <?php echo $this->element('Lists/actordetails', ['key' => __('Gender'), 'value' => h($genderList[$actor->gender])]); ?>
-      <?php endif ?>
     </ul>
   </div>
   <div class="w3-container w3-cell w3-mobile" style="min-width:320px">
     <ul class="w3-ul">
-      <?php echo $this->element('Lists/actordetails', ['key' => __('Playing Age'), 'value' => h($this->Number->format($actor->playing_age_from)) . '-' . h($this->Number->format($actor->playing_age_to))]); ?>
-      <?php echo $this->element('Lists/actordetails', ['key' => __('Eye Color'), 'value' => h($eyecolorList[$actor->eyecolor_id])]); ?>
-      <?php echo $this->element('Lists/actordetails', ['key' => __('Hair Color'), 'value' => h($this->Number->format($actor->haircolor_id))]); ?>
-      <?php echo $this->element('Lists/actordetails', ['key' => __('Height'), 'value' => h($this->Number->format($actor->height_cm) . 'cm')]); ?>
+      <?php echo $this->element('Lists/actordetails', ['key' => __('Date of Birth'), 'value' => $actor->birthdate->i18nFormat([\IntlDateFormatter::MEDIUM, \IntlDateFormatter::NONE])]); ?>
+      <?php if (isset($genderList[$actor->gender])): ?>
+        <?php echo $this->element('Lists/actordetails', ['key' => __('Gender'), 'value' => h($genderList[$actor->gender])]); ?>
+      <?php endif ?>
     </ul>
   </div>
 </div>
@@ -44,19 +40,15 @@
 <div class="w3-cell-row w3-theme-l5 w3-mobile">
   <div class="w3-container w3-cell w3-mobile" style="min-width:320px">
     <ul class="w3-ul">
-      <?php echo $this->element('Lists/actordetails', ['key' => __('Name'), 'value' => h($actor->user->firstname) . ' ' . h($actor->user->lastname)]); ?>
-      <?php echo $this->element('Lists/actordetails', ['key' => __('Artist Name'), 'value' => h($actor->artist_name)]); ?>
-      <?php echo $this->element('Lists/actordetails', ['key' => __('Date of Birth'), 'value' => $actor->birthdate->i18nFormat([\IntlDateFormatter::MEDIUM, \IntlDateFormatter::NONE])]); ?>
-      <?php if (isset($genderList[$actor->gender])): ?>
-        <?php echo $this->element('Lists/actordetails', ['key' => __('Gender'), 'value' => h($genderList[$actor->gender])]); ?>
+      <?php if (isset($haircolorList[$actor->haircolor_id])): ?>
+        <?php echo $this->element('Lists/actordetails', ['key' => __('Hair Color'), 'value' => h($haircolorList[$actor->haircolor_id])]); ?>
       <?php endif ?>
+      <?php echo $this->element('Lists/actordetails', ['key' => __('Eye Color'), 'value' => h($eyecolorList[$actor->eyecolor_id])]); ?>    
     </ul>
   </div>
   <div class="w3-container w3-cell w3-mobile" style="min-width:320px">
     <ul class="w3-ul">
       <?php echo $this->element('Lists/actordetails', ['key' => __('Playing Age'), 'value' => h($this->Number->format($actor->playing_age_from)) . '-' . h($this->Number->format($actor->playing_age_to))]); ?>
-      <?php echo $this->element('Lists/actordetails', ['key' => __('Eye Color'), 'value' => h($this->Number->format($actor->eyecolor_id))]); ?>
-      <?php echo $this->element('Lists/actordetails', ['key' => __('Hair Color'), 'value' => h($this->Number->format($actor->haircolor_id))]); ?>
       <?php echo $this->element('Lists/actordetails', ['key' => __('Height'), 'value' => h($this->Number->format($actor->height_cm) . 'cm')]); ?>
     </ul>
   </div>
@@ -78,7 +70,9 @@
     <ul class="w3-ul">
       <?php echo $this->element('Lists/actordetails', ['key' => __('Playing Age'), 'value' => h($this->Number->format($actor->playing_age_from)) . '-' . h($this->Number->format($actor->playing_age_to))]); ?>
       <?php echo $this->element('Lists/actordetails', ['key' => __('Eye Color'), 'value' => h($this->Number->format($actor->eyecolor_id))]); ?>
-      <?php echo $this->element('Lists/actordetails', ['key' => __('Hair Color'), 'value' => h($this->Number->format($actor->haircolor_id))]); ?>
+      <?php if (isset($haircolorList[$actor->haircolor_id])): ?>
+        <?php echo $this->element('Lists/actordetails', ['key' => __('Hair Color'), 'value' => h($haircolorList[$actor->haircolor_id])]); ?>
+      <?php endif ?>
       <?php echo $this->element('Lists/actordetails', ['key' => __('Height'), 'value' => h($this->Number->format($actor->height_cm) . 'cm')]); ?>
     </ul>
   </div>
@@ -100,7 +94,9 @@
     <ul class="w3-ul">
       <?php echo $this->element('Lists/actordetails', ['key' => __('Playing Age'), 'value' => h($this->Number->format($actor->playing_age_from)) . '-' . h($this->Number->format($actor->playing_age_to))]); ?>
       <?php echo $this->element('Lists/actordetails', ['key' => __('Eye Color'), 'value' => h($this->Number->format($actor->eyecolor_id))]); ?>
-      <?php echo $this->element('Lists/actordetails', ['key' => __('Hair Color'), 'value' => h($this->Number->format($actor->haircolor_id))]); ?>
+      <?php if (isset($haircolorList[$actor->haircolor_id])): ?>
+        <?php echo $this->element('Lists/actordetails', ['key' => __('Hair Color'), 'value' => h($haircolorList[$actor->haircolor_id])]); ?>
+      <?php endif ?>
       <?php echo $this->element('Lists/actordetails', ['key' => __('Height'), 'value' => h($this->Number->format($actor->height_cm) . 'cm')]); ?>
     </ul>
   </div>

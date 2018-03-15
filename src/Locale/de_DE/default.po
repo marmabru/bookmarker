@@ -57,3 +57,40 @@ msgstr "Schauspieler-Suche"
 
 msgid "The actor has been saved."
 msgstr "Schauspielerdaten wurden gespeichert."
+
+// Colors
+msgid "black"
+msgstr "schwarz"
+
+msgid "gray"
+msgstr "grau"
+
+msgid "light gray"
+msgstr "hellgrau"
+
+msgid "dark gray"
+msgstr "dunkelgrau"
+
+msgid "brown"
+msgstr "braun"
+
+msgid "light brown"
+msgstr "hellbraun"
+
+msgid "dark brown"
+msgstr "dunkelbraun"
+
+msgid "blond"
+msgstr "blond"
+
+msgid "light blond"
+msgstr "hellblond"
+
+msgid "dark blond"
+msgstr "dunkelblond"
+
+msgid "red"
+msgstr "rot"
+
+msgid "white"
+msgstr "weiß"

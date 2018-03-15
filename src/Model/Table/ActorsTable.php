@@ -46,7 +46,8 @@ class ActorsTable extends Table
         $this->hasOne('Eyecolors', [
             'foreignKey' => 'eyecolor_id'
         ]);
-        $this->addBehavior('GenderMapper');   // genderList
+        $this->addBehavior('GenderMapper');      // genderList
+        $this->addBehavior('HaircolorMapper');   // haircolorList
     }
 
     /**
