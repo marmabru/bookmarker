@@ -44,8 +44,9 @@ class ActorsController extends AppController
     public function view($id = null)
     {
         $actor = $this->Actors->get($id, [
-            'contain' => ['Users', 'ActorPhotos']
+            'contain' => ['Users', 'ActorPhotos','SportSkills']
         ]);
+        //debug(print_r($actor));
 
         $this->set(compact('actor', 'users'));
     }
@@ -181,6 +182,9 @@ class ActorsController extends AppController
 
           $haircolorList = $this->Actors->getHaircolorList();
           $this->set(compact('haircolorList'));
+
+          $sportSkillList = $this->Actors->getSportSkillList();
+          $this->set(compact('sportSkillList'));
 
           $query = $this->Actors->Eyecolors->find('list', [
             'keyField' => 'id',
