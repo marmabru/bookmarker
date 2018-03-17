@@ -59,6 +59,9 @@
   <div class="w3-container w3-cell w3-mobile" style="min-width:320px">
     <ul class="w3-ul">
       <div class='w3-text-gray'><h5><?= __('Sports') ?></h5></div>
+      <?php if (empty($actor->sport_skills)): ?>
+        <?php echo $this->element('Lists/actordetails', ['key' => __('<no skills specified>')]); ?>
+      <?php endif ?>
       <?php foreach ($actor->sport_skills as $skill): ?>
         <?php echo $this->element('Lists/actordetails', ['key' => h($sportSkillList[$skill->id]), 'metervalue' => h($skill->level)]); ?>
       <?php endforeach; ?>

@@ -1,6 +1,9 @@
 msgid "Actors List"
 msgstr "Liste der Schauspieler"
 
+msgid "Appearance"
+msgstr "Aussehen"
+
 msgid "Artist Name"
 msgstr "Künstlername"
 
@@ -12,6 +15,9 @@ msgstr "български"
 
 msgid "English"
 msgstr "English"
+
+msgid "Experience"
+msgstr "Erfahrung"
 
 msgid "Eye Color"
 msgstr "Augenfarbe"
@@ -28,8 +34,8 @@ msgstr "Geschlecht"
 msgid "Hair Color"
 msgstr "Haarfarbe"
 
-msgid "Height (cm)"
-msgstr "Größe (in cm)"
+msgid "Height"
+msgstr "Größe"
 
 msgid "German"
 msgstr "Deutsch"
@@ -49,14 +55,46 @@ msgstr "Name"
 msgid "New User"
 msgstr "Neuer Nutzer"
 
+msgid "Personal Info"
+msgstr "Infos zur Person"
+
 msgid "Playing Age"
 msgstr "Spielalter"
 
 msgid "Search Actor"
 msgstr "Schauspieler-Suche"
 
+msgid "Skills"
+msgstr "Fähigkeiten"
+
+msgid "Sports"
+msgstr "Sportarten"
+
 msgid "The actor has been saved."
 msgstr "Schauspielerdaten wurden gespeichert."
+
+// Sport skills
+
+msgid "Archery"
+msgstr "Bogenschießen"
+
+msgid "Fencing"
+msgstr "Fechten"
+
+msgid "Juggling"
+msgstr "Jonglieren"
+
+msgid "Soccer"
+msgstr "Fußball"
+
+msgid "Basketball"
+msgstr "Basketball"
+
+msgid "Volleyball"
+msgstr "Volleyball"
+
+msgid "Baseball"
+msgstr "Baseball"
 
 // Colors
 msgid "black"

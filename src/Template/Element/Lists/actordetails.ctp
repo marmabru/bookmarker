@@ -9,9 +9,13 @@
   <div  class="w3-bar-item w3-text-gray" style="width:40%; "><?= h($key) . ': ' ?></div>
   <div  class="w3-bar-item""><meter value="<?php echo h($metervalue)?>" min="0" max="5"><?php echo h($metervalue)?> __('out of 5')</meter><br></div>
 </li>
-<?php else: ?>
+<?php elseif (isset($value)): ?>
   <li class="w3-bar">
     <div  class="w3-bar-item w3-text-gray" style="width:40%; "><?= h($key) . ': ' ?></div>
     <div  class="w3-bar-item""><?= h($value) ?></div>
+  </li>
+<?php else: ?>
+  <li class="w3-bar">
+    <div  class="w3-bar-item w3-text-gray" style="width:100%; "><?= h($key)?></div>
   </li>
 <?php endif ?>
