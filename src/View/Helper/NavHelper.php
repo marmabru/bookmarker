@@ -30,7 +30,7 @@ use Cake\View\Helper;
 
 								foreach ($this->_View->get('LanguageList') as $languageKey => $language) {
 									$menuLarge = $menuLarge .
-										$this->Html->link($this->Html->image('flags/' . $this->_View->get('LanguageList')[$languageKey]['img'], ['class' => 'w3-round w3-image', 'style' => 'height:10px;width:20px']) . ' ' . __($language['name']),
+										$this->Html->link($this->Html->image('flags/' . $this->_View->get('LanguageList')[$languageKey]['img'], ['class' => 'w3-round w3-image', 'style' => 'height:10px;width:20px']) . ' ' . __d('menu', $language['name']),
 											['controller' => 'Users', 'action' => 'setLanguage', $languageKey],
 											['class' => 'w3-bar-item w3-button w3-small w3-hide-small', 'escape' => false]);
 								}

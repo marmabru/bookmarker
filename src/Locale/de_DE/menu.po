@@ -1,0 +1,8 @@
+msgid "German"
+msgstr "Deutsch"
+
+msgid "English"
+msgstr "English"
+
+msgid "Bulgarian"
+msgstr "български"

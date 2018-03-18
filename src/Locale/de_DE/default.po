@@ -1,3 +1,6 @@
+msgid "Accents"
+msgstr "Akzente/Mundarten"
+
 msgid "Actors List"
 msgstr "Liste der Schauspieler"
 
@@ -10,11 +13,14 @@ msgstr "Künstlername"
 msgid "Date of Birth"
 msgstr "Geburtsdatum"
 
+msgid "Dancing"
+msgstr "Tanz"
+
 msgid "Bulgarian"
-msgstr "български"
+msgstr "Bulgarisch"
 
 msgid "English"
-msgstr "English"
+msgstr "Englisch"
 
 msgid "Experience"
 msgstr "Erfahrung"
@@ -40,6 +46,9 @@ msgstr "Größe"
 msgid "German"
 msgstr "Deutsch"
 
+msgid "Languages"
+msgstr "Sprachen"
+
 msgid "Last Name"
 msgstr "Nachname"
 
@@ -49,11 +58,17 @@ msgstr "Angemeldet als:"
 msgid "Male"
 msgstr "männlich"
 
+msgid "Musical Instruments"
+msgstr "Instrumente"
+
 msgid "Name"
 msgstr "Name"
 
 msgid "New User"
 msgstr "Neuer Nutzer"
+
+msgid "<no skills specified>"
+msgstr "<keine Angaben>"
 
 msgid "Personal Info"
 msgstr "Infos zur Person"
@@ -63,6 +78,9 @@ msgstr "Spielalter"
 
 msgid "Search Actor"
 msgstr "Schauspieler-Suche"
+
+msgid "Singing"
+msgstr "Gesang"
 
 msgid "Skills"
 msgstr "Fähigkeiten"

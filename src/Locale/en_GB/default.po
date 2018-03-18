@@ -1,5 +1,1 @@
-msgid "Bulgarian"
-msgstr "български"
 
-msgid "German"
-msgstr "Deutsch"

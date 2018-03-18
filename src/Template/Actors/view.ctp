@@ -50,6 +50,7 @@
     <ul class="w3-ul">
       <?php echo $this->element('Lists/actordetails', ['key' => __('Playing Age'), 'value' => h($this->Number->format($actor->playing_age_from)) . '-' . h($this->Number->format($actor->playing_age_to))]); ?>
       <?php echo $this->element('Lists/actordetails', ['key' => __('Height'), 'value' => h($this->Number->format($actor->height_cm) . 'cm')]); ?>
+
     </ul>
   </div>
 </div>
@@ -65,11 +66,32 @@
       <?php foreach ($actor->sport_skills as $skill): ?>
         <?php echo $this->element('Lists/actordetails', ['key' => h($sportSkillList[$skill->id]), 'metervalue' => h($skill->level)]); ?>
       <?php endforeach; ?>
+
+
+      <div class='w3-text-gray'><h5><?= __('Dancing') ?></h5></div>
+        <?php echo $this->element('Lists/actordetails', ['key' => __('<no skills specified>')]); ?>
+
+      <div class='w3-text-gray'><h5><?= __('Singing') ?></h5></div>
+        <?php echo $this->element('Lists/actordetails', ['key' => __('<no skills specified>')]); ?>
+
     </ul>
   </div>
   <div class="w3-container w3-cell w3-mobile" style="min-width:320px">
     <ul class="w3-ul">
-    </ul>
+      <div class='w3-text-gray'><h5><?= __('Languages') ?></h5></div>
+      <?php if (empty($actor->language_skills)): ?>
+        <?php echo $this->element('Lists/actordetails', ['key' => __('<no skills specified>')]); ?>
+      <?php endif ?>
+      <?php foreach ($actor->language_skills as $skill): ?>
+        <?php echo $this->element('Lists/actordetails', ['key' => h($languageSkillList[$skill->id]), 'metervalue' => h($skill->level)]); ?>
+      <?php endforeach; ?>
+
+      <div class='w3-text-gray'><h5><?= __('Accents') ?></h5></div>
+        <?php echo $this->element('Lists/actordetails', ['key' => __('<no skills specified>')]); ?>
+              
+      <div class='w3-text-gray'><h5><?= __('Musical Instruments') ?></h5></div>
+        <?php echo $this->element('Lists/actordetails', ['key' => __('<no skills specified>')]); ?>
+  </ul>
   </div>
 </div>
 

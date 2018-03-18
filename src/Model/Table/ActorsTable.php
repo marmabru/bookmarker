@@ -46,12 +46,16 @@ class ActorsTable extends Table
         $this->hasMany('SportSkills', [
             'foreignKey' => 'actor_id'
         ]);
+        $this->hasMany('LanguageSkills', [
+            'foreignKey' => 'actor_id'
+        ]);
         $this->hasOne('Eyecolors', [
             'foreignKey' => 'eyecolor_id'
         ]);
         $this->addBehavior('GenderMapper');      // genderList
         $this->addBehavior('HaircolorMapper');   // haircolorList
         $this->addBehavior('SportSkillMapper');  // sportSkillList
+        $this->addBehavior('LanguageSkillMapper');  // languageSkillList
 
         // Allow storing of translated content for the following fields
         $this->addBehavior('Translate', ['fields' => ['artist_name']]);
