@@ -1,15 +1,6 @@
 msgid "Actors List"
 msgstr "Списък на актьорите"
 
-msgid "Bulgarian"
-msgstr "български"
-
-msgid "German"
-msgstr "Deutsch"
-
-msgid "English"
-msgstr "English"
-
 msgid "Logged in as:"
 msgstr "Влезли сте като:"
 

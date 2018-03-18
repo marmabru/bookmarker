@@ -69,7 +69,12 @@
 
 
       <div class='w3-text-gray'><h5><?= __('Dancing') ?></h5></div>
+      <?php if (empty($actor->dance_skills)): ?>
         <?php echo $this->element('Lists/actordetails', ['key' => __('<no skills specified>')]); ?>
+      <?php endif ?>
+      <?php foreach ($actor->dance_skills as $skill): ?>
+        <?php echo $this->element('Lists/actordetails', ['key' => h($danceSkillList[$skill->id]), 'metervalue' => h($skill->level)]); ?>
+      <?php endforeach; ?>
 
       <div class='w3-text-gray'><h5><?= __('Singing') ?></h5></div>
         <?php echo $this->element('Lists/actordetails', ['key' => __('<no skills specified>')]); ?>
@@ -88,7 +93,7 @@
 
       <div class='w3-text-gray'><h5><?= __('Accents') ?></h5></div>
         <?php echo $this->element('Lists/actordetails', ['key' => __('<no skills specified>')]); ?>
-              
+
       <div class='w3-text-gray'><h5><?= __('Musical Instruments') ?></h5></div>
         <?php echo $this->element('Lists/actordetails', ['key' => __('<no skills specified>')]); ?>
   </ul>
