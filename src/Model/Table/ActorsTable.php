@@ -52,6 +52,9 @@ class ActorsTable extends Table
         $this->hasMany('DanceSkills', [
             'foreignKey' => 'actor_id'
         ]);
+        $this->hasMany('Experiences', [
+            'foreignKey' => 'actor_id'
+        ]);
         $this->hasOne('Eyecolors', [
             'foreignKey' => 'eyecolor_id'
         ]);

@@ -44,7 +44,7 @@ class ActorsController extends AppController
     public function view($id = null)
     {
         $actor = $this->Actors->get($id, [
-            'contain' => ['Users', 'ActorPhotos','SportSkills','LanguageSkills','DanceSkills']
+            'contain' => ['Users', 'ActorPhotos','SportSkills','LanguageSkills','DanceSkills','Experiences']
         ]);
         //debug(print_r($actor));
 

@@ -19,6 +19,9 @@ msgstr "Auszeichnungen"
 msgid "Bulgarian"
 msgstr "Bulgarisch"
 
+msgid "Contact"
+msgstr "Kontakt"
+
 msgid "Date of Birth"
 msgstr "Geburtsdatum"
 
