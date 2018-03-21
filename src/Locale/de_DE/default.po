@@ -4,11 +4,20 @@ msgstr "Akzente/Mundarten"
 msgid "Actors List"
 msgstr "Liste der Schauspieler"
 
+msgid "Agency/Management"
+msgstr "Agentur/Management"
+
 msgid "Appearance"
 msgstr "Aussehen"
 
 msgid "Artist Name"
 msgstr "Künstlername"
+
+msgid "Awards"
+msgstr "Auszeichnungen"
+
+msgid "Bulgarian"
+msgstr "Bulgarisch"
 
 msgid "Date of Birth"
 msgstr "Geburtsdatum"
@@ -16,8 +25,8 @@ msgstr "Geburtsdatum"
 msgid "Dancing"
 msgstr "Tanz"
 
-msgid "Bulgarian"
-msgstr "Bulgarisch"
+msgid "Direct Contact"
+msgstr "Direkter Kontakt"
 
 msgid "English"
 msgstr "Englisch"
@@ -30,6 +39,9 @@ msgstr "Augenfarbe"
 
 msgid "Female"
 msgstr "weiblich"
+
+msgid "Film"
+msgstr "Film"
 
 msgid "First Name"
 msgstr "Vorname"
@@ -70,6 +82,15 @@ msgstr "Neuer Nutzer"
 msgid "<no skills specified>"
 msgstr "<keine Angaben>"
 
+msgid "<nothing specified>"
+msgstr "<keine Angaben>"
+
+msgid "Nominations"
+msgstr "Nominierungen"
+
+msgid "Other"
+msgstr "Weiteres"
+
 msgid "Personal Info"
 msgstr "Infos zur Person"
 
@@ -90,6 +111,15 @@ msgstr "Sportarten"
 
 msgid "The actor has been saved."
 msgstr "Schauspielerdaten wurden gespeichert."
+
+msgid "Theater"
+msgstr "Theater"
+
+msgid "Training"
+msgstr "Ausbildung"
+
+msgid "TV"
+msgstr "Fernsehen"
 
 // Dance skills
 '1'=>__('Ballroom Standard'),
