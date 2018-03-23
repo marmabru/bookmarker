@@ -102,58 +102,12 @@
 
 <div class='w3-container w3-theme-l3'><h4><?= __('Experience') ?></h4></div>
 <div class="w3-theme-l5">
-  <div class="w3-container" style="min-width:320px width:800px">
-    <ul class="w3-ul">
-      <div class='w3-text-gray'><h5><?= __('Film') ?></h5></div>
-      <?php if (empty($actor->experiences)): ?>
-        <?php echo $this->element('Lists/actordetails', ['key' => __('<nothing specified>')]); ?>
-      <?php endif ?>
-      <table class="w3-table w3-small">
-      <tr>
-        <th class="w3-text-gray"><?= __('Year') ?></th>
-        <th class="w3-text-gray"><?= __('Title') ?></th>
-        <th class="w3-text-gray"><?= __('Role') ?></th>
-        <th class="w3-text-gray"><?= __('Director') ?></th>
-        <th class="w3-text-gray"><?= __('Production') ?></th>
-        <th class="w3-text-gray"><?= __('Distribution') ?></th>
-      </tr>
 
-      <?php foreach ($actor->experiences as $experience): ?>
-        <tr>
-          <td><?= h($experience->year_start) ?>
-            <?php if (!empty($experience->year_end)): ?>
-              - <?= h($experience->year_end) ?>
-            <?php endif ?>
-          </td>
-          <td><b><?= h($experience->title) ?></b></td>
-          <td><?= h($experience->role_name) . ' (' . h($experience->role_id) . ')' ?></td>
-          <td><?= h($experience->director) ?></td>
-          <td><?= h($experience->production) ?></td>
-          <td><?= h($experience->distribution) ?></td>
-        </tr>
-      <?php endforeach; ?>
+  <?php echo $this->element('Tables/experiences', ['title' => __('Film'), 'type' => '1', 'experiences' => $all_experiences]); ?>
+  <?php echo $this->element('Tables/experiences', ['title' => __('TV'), 'type' => '2', 'experiences' => $all_experiences]); ?>
+  <?php echo $this->element('Tables/experiences', ['title' => __('Theater'), 'type' => '3', 'experiences' => $all_experiences]); ?>
+  <?php echo $this->element('Tables/experiences', ['title' => __('Other'), 'type' => '9', 'experiences' => $all_experiences]); ?>
 
-      </table>
-    </ul>
-  </div>
-  <div class="w3-container" style="min-width:320px width:800px">
-    <ul class="w3-ul">
-      <div class='w3-text-gray'><h5><?= __('TV') ?></h5></div>
-        <?php echo $this->element('Lists/actordetails', ['key' => __('<nothing specified>')]); ?>
-    </ul>
-  </div>
-  <div class="w3-container" style="min-width:320px width:800px">
-    <ul class="w3-ul">
-      <div class='w3-text-gray'><h5><?= __('Theater') ?></h5></div>
-        <?php echo $this->element('Lists/actordetails', ['key' => __('<nothing specified>')]); ?>
-    </ul>
-  </div>
-  <div class="w3-container" style="min-width:320px width:800px">
-    <ul class="w3-ul">
-      <div class='w3-text-gray'><h5><?= __('Other') ?></h5></div>
-        <?php echo $this->element('Lists/actordetails', ['key' => __('<nothing specified>')]); ?>
-    </ul>
-  </div>
   <div class="w3-container" style="min-width:320px width:800px">
     <ul class="w3-ul">
       <div class='w3-text-gray'><h5><?= __('Awards') . "/" . __('Nominations') ?></h5></div>

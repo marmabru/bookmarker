@@ -5,7 +5,10 @@ use App\Controller\AppController;
 use Cake\I18n\I18n;
 use Cake\ORM\Behavior\Translate\TranslateTrait;
 use Cake\ORM\Entity;
+use Cake\ORM\TableRegistry;
 use Cake\Event\Event;
+
+
 
 
 /**
@@ -46,9 +49,14 @@ class ActorsController extends AppController
         $actor = $this->Actors->get($id, [
             'contain' => ['Users', 'ActorPhotos','SportSkills','LanguageSkills','DanceSkills','Experiences']
         ]);
-        //debug(print_r($actor));
 
-        $this->set(compact('actor', 'users'));
+        $experiences = TableRegistry::get('Experiences');
+        $all_experiences = $experiences
+          ->find()
+          ->order(['year_start' => 'DESC'])
+          ->toArray();
+
+        $this->set(compact('actor', 'users', 'all_experiences'));
     }
 
     /**
