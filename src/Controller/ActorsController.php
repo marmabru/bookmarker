@@ -191,6 +191,9 @@ class ActorsController extends AppController
           $haircolorList = $this->Actors->getHaircolorList();
           $this->set(compact('haircolorList'));
 
+          $roleList = $this->Actors->getRoleList();
+          $this->set(compact('roleList'));
+
           $sportSkillList = $this->Actors->getSportSkillList();
           $this->set(compact('sportSkillList'));
 

@@ -24,7 +24,7 @@
                 <?php endif ?>
               </td>
               <td><b><?= h($experience->title) ?></b></td>
-              <td><?= h($experience->role_name) . ' (' . h($experience->role_id) . ')' ?></td>
+              <td><?= h($experience->role_name) . ' (' . h($roleList[$experience->role_id]) . ')' ?></td>
               <td><?= h($experience->director) ?></td>
               <td><?= h($experience->production) ?></td>
               <td><?= h($experience->distribution) ?></td>

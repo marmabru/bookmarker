@@ -195,6 +195,44 @@ msgstr "Volleyball"
 msgid "Baseball"
 msgstr "Baseball"
 
+// Roles
+'1'=>__('Lead'),
+'2'=>__('Small role'),
+'3'=>__('Guest role'),
+'4'=>__('Ongoing role'),
+'5'=>__('Cameo'),
+'6'=>__('Speaker'),
+'7'=>__('Host'),
+'101'=>__('Director'),
+'102'=>__('Producer')
+
+msgid "Lead"
+msgstr "Hauptrolle"
+
+msgid "Small role"
+msgstr "Nebenrolle"
+
+msgid "Guest role"
+msgstr "Gastrolle"
+
+msgid "Ongoing role"
+msgstr "Serienrolle"
+
+msgid "Cameo"
+msgstr "Cameo"
+
+msgid "Speaker"
+msgstr "Sprecher"
+
+msgid "Host"
+msgstr "Moderator"
+
+msgid "Director"
+msgstr "Regisseur"
+
+msgid "Producer"
+msgstr "Produzent"
+
 // Colors
 msgid "black"
 msgstr "schwarz"

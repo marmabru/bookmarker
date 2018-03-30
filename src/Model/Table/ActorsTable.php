@@ -60,6 +60,7 @@ class ActorsTable extends Table
         ]);
         $this->addBehavior('GenderMapper');      // genderList
         $this->addBehavior('HaircolorMapper');   // haircolorList
+        $this->addBehavior('RoleMapper');        // roleList
         $this->addBehavior('SportSkillMapper');  // sportSkillList
         $this->addBehavior('LanguageSkillMapper');  // languageSkillList
         $this->addBehavior('DanceSkillMapper');  // danceSkillList
