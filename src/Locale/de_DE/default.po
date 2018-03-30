@@ -31,6 +31,12 @@ msgstr "Tanz"
 msgid "Direct Contact"
 msgstr "Direkter Kontakt"
 
+msgid "Director"
+msgstr "Regisseur"
+
+msgid "Distribution"
+msgstr "Vertrieb"
+
 msgid "English"
 msgstr "Englisch"
 
@@ -100,6 +106,12 @@ msgstr "Infos zur Person"
 msgid "Playing Age"
 msgstr "Spielalter"
 
+msgid "Production"
+msgstr "Produktion"
+
+msgid "Role"
+msgstr "Rolle"
+
 msgid "Search Actor"
 msgstr "Schauspieler-Suche"
 
@@ -118,11 +130,17 @@ msgstr "Schauspielerdaten wurden gespeichert."
 msgid "Theater"
 msgstr "Theater"
 
+msgid "Title"
+msgstr "Titel"
+
 msgid "Training"
 msgstr "Ausbildung"
 
 msgid "TV"
 msgstr "Fernsehen"
+
+msgid "Year"
+msgstr "Jahr"
 
 // Dance skills
 '1'=>__('Ballroom Standard'),
