@@ -45,6 +45,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
       h1, h2, h3, h4 {
         font-family: "Shadows Into Light", cursive, sans-serif;
       }
+      .w3-menufont {
+        font-family: "Roboto", cursive, sans-serif;
+      }
     </style>
 </head>
 <body>
