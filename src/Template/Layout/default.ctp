@@ -35,9 +35,17 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->Html->css('w3.css') ?>
     <?= $this->Html->css('w3-theme-blue-grey.css') ?>
 
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light|Roboto:300,400,700" rel="stylesheet">
+
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
+
+    <style>
+      h1, h2, h3, h4 {
+        font-family: "Shadows Into Light", cursive, sans-serif;
+      }
+    </style>
 </head>
 <body>
     <?= $this->Flash->render() ?>
