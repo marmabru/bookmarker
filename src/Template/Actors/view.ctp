@@ -69,7 +69,7 @@
           <?php echo $this->element('Lists/actordetails', ['key' => __('<no skills specified>')]); ?>
         <?php endif ?>
         <?php foreach ($actor->sport_skills as $skill): ?>
-          <?php echo $this->element('Lists/actordetails', ['key' => h($sportSkillList[$skill->id]), 'metervalue' => h($skill->level)]); ?>
+          <?php echo $this->element('Lists/actordetails', ['key' => h($sportSkillList[$skill->skill]), 'metervalue' => h($skill->level)]); ?>
         <?php endforeach; ?>
 
 
@@ -78,7 +78,7 @@
           <?php echo $this->element('Lists/actordetails', ['key' => __('<no skills specified>')]); ?>
         <?php endif ?>
         <?php foreach ($actor->dance_skills as $skill): ?>
-          <?php echo $this->element('Lists/actordetails', ['key' => h($danceSkillList[$skill->id]), 'metervalue' => h($skill->level)]); ?>
+          <?php echo $this->element('Lists/actordetails', ['key' => h($danceSkillList[$skill->skill]), 'metervalue' => h($skill->level)]); ?>
         <?php endforeach; ?>
 
         <div class='w3-text-gray'><h5><?= __('Singing') ?></h5></div>
@@ -93,7 +93,7 @@
           <?php echo $this->element('Lists/actordetails', ['key' => __('<no skills specified>')]); ?>
         <?php endif ?>
         <?php foreach ($actor->language_skills as $skill): ?>
-          <?php echo $this->element('Lists/actordetails', ['key' => h($languageSkillList[$skill->id]), 'metervalue' => h($skill->level)]); ?>
+          <?php echo $this->element('Lists/actordetails', ['key' => h($languageSkillList[$skill->skill]), 'metervalue' => h($skill->level)]); ?>
         <?php endforeach; ?>
 
         <div class='w3-text-gray'><h5><?= __('Accents') ?></h5></div>
