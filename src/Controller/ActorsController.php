@@ -138,29 +138,32 @@ class ActorsController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $searchCrits = $this->request->getData();
 
-            $query = $this->Actors->find();
+
+            $query = $this->Actors->find('all', ['contain' => ['DanceSkills', 'LanguageSkills']]);
 
             // Now add the WHERE parts by iterating over the searchCrits
             foreach ($searchCrits as $searchKey => $searchValue) {
-              if ($searchValue) {
-                // only include searchKeys where the user set a value
-                if ($searchKey == 'playing_age') {
+              if ($searchValue) {       // only include searchKeys where the user set a value
+                if ($searchKey == 'playing_age') {    // playing_age is a range
                   $query = $query->where(['playing_age_from <' => $searchValue]);
                   $query = $query->where(['playing_age_to >' => $searchValue]);
+                } else if ($searchKey == 'dance_skill_1') {
+                  $skill = $searchValue;
+                } else if ($searchKey == 'dance_skill_1_level') {
+                  $skillLevel = $searchValue;
+                  $subquery = $this->Actors->DanceSkills->find('all')
+                    ->select(['actor_id'])
+                    ->where(['skill =' => $skill])
+                    ->andwhere(['level >=' => $skillLevel]);
+                  $query = $query->where(['Actors.id' => $subquery], ['Actors.id' => 'integer[]']);
                 } else {
                   $query = $query->where([$searchKey => $searchValue]);
                 }
               }
             }
-            // ->orWhere(['author_id' => 3])
-            // ->andWhere([
-            //   'published' => true,
-            //   'view_count >' => 10
-            // ])
-            // ->orWhere(['promoted' => true]);
 
             $this->paginate = [
-                'contain' => ['Users', 'ActorPhotos']
+                'contain' => ['Users', 'ActorPhotos', 'DanceSkills']
             ];
 
             $actors = $this->paginate($query);
