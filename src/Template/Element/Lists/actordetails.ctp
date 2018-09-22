@@ -12,7 +12,7 @@
 <?php elseif (isset($value)): ?>
   <li class="w3-bar">
     <div  class="w3-bar-item w3-text-gray" style="width:40%; "><?= h($key) . ': ' ?></div>
-    <div  class="w3-bar-item""><?= h($value) ?></div>
+    <div  class="w3-bar-item actordetails-value"><?= h($value) ?></div>
   </li>
 <?php else: ?>
   <li class="w3-bar">

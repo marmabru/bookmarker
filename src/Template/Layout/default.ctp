@@ -36,6 +36,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->Html->css('w3-theme-blue-grey.css') ?>
 
     <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light|Roboto:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
+
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
@@ -48,6 +50,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
       .w3-menufont {
         font-family: "Roboto", cursive, sans-serif;
       }
+      .actordetails-value {
+        font-family: "Cutive Mono";
+      }
+
     </style>
 </head>
 <body>
